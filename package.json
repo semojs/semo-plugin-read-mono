@@ -1,0 +1,13 @@
+{
+  "name": "semo-plugin-read-mono",
+  "private": true,
+  "scripts": {
+    "test": "exit 0",
+    "lerna": "lerna",
+    "prepublish": "lerna run prepublish",
+    "lerna:publish": "lerna publish from-git --yes"
+  },
+  "devDependencies": {
+    "lerna": "^3.19.0"
+  }
+}

@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>{{title}}</title>
+<link rel="stylesheet" href="editor.md/css/editormd.css" />
+</head>
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+}
+</style>
+<body>
+<div id="editor">
+    <textarea style="display:none;">{{markdown}}
+    </textarea>
+  </div>
+<script src="https://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="editor.md/editormd.min.js"></script>
+<script>
+  $(function() {
+    $(document).ready(function() {
+
+      editormd.toolbarModes = {
+        simple : [
+            "undo", "redo", "|", 
+            "bold", "del", "italic", "quote", "uppercase", "lowercase", "|", 
+            "h1", "h2", "h3", "h4", "h5", "h6", "|", 
+            "list-ul", "list-ol", "hr", "|",
+            "watch", "preview", "|",
+            "help"
+          ],
+        };
+
+      var editor = editormd("editor", {
+        mode: 'gfm',
+        // width: "100%",
+        // height: "100%",
+        // markdown: "xxxx",     // dynamic set Markdown text
+        toolbarIcons: 'simple',
+        tocContainer  : "",
+        htmlDecode: true,
+        tocDropdown   : true,
+        tocTitle      : "目录 Table of Contents",
+        onload: function() {
+          this.fullscreen()
+          if (this.markdownTextarea.val().trim().length > 0) {
+            this.unwatch()
+            this.previewing()
+          } else {
+            this.setMarkdown("")
+          }
+        },
+        path : "editor.md/lib/"  // Autoload modules mode, codemirror, marked... dependents libs path
+      });
+    })
+  });
+
+</script>
+</body>  
+</html>

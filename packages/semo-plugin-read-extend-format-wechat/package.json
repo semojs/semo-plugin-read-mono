@@ -1,0 +1,56 @@
+{
+  "name": "semo-plugin-read-extend-format-wechat",
+  "version": "0.0.0",
+  "description": "A plugin of semo-plugin-read, provide wechat format",
+  "keywords": [
+    "cli",
+    "command",
+    "markdown",
+    "reader",
+    "semo",
+    "semo-plugin-read"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semojs/semo-plugin-read-mono"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.0.1",
+    "@typescript-eslint/eslint-plugin": "^2.33.0",
+    "@typescript-eslint/parser": "^2.33.0",
+    "eslint": "^7.0.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "markdown-nice": "^1.8.1",
+    "parcel-bundler": "^1.12.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.2"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "prepare": "npm run clean && npm run build",
+    "wechat:dev": "parcel views/index.html",
+    "wechat:build": "parcel build views/index.js -d assets --no-source-maps --no-content-hash"
+  },
+  "dependencies": {
+    "axios": "^0.19.2",
+    "boxen": "^4.2.0",
+    "chalk": "^4.0.0",
+    "koa": "^2.12.0",
+    "koa-router": "^8.0.8",
+    "koa-static": "^5.0.0",
+    "koa-views": "^6.2.2",
+    "lodash": "^4.17.15",
+    "nunjucks": "^3.2.1",
+    "open": "^7.0.4"
+  }
+}
