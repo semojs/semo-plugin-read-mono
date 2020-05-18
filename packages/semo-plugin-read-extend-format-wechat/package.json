@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-wechat",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A plugin of semo-plugin-read, provide wechat format",
   "keywords": [
     "cli",
@@ -16,7 +16,6 @@
   },
   "main": "index.js",
   "license": "MIT",
-  "peerDependencies": {},
   "devDependencies": {
     "@types/node": "^14.0.1",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
