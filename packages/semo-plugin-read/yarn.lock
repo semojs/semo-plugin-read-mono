@@ -3930,10 +3930,10 @@ saxes@^3.1.9:
   dependencies:
     xmlchars "^2.1.1"
 
-semo-plugin-serve@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-0.0.7.tgz#40e719f2d5d240b86afea8a3a4d7c7b9866dd81b"
-  integrity sha512-9e13h8WRk3qhby1kx2fvTW8pUS7cUpTwtJhX8pYvvSoX9+AM10xrjRCG3KOjj4Ey2krxrEpAPSvc6zI0xttTug==
+semo-plugin-serve@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-0.0.8.tgz#dddd81874fb8e59b3b1a4e728d7305b27f3decca"
+  integrity sha512-eBtLnFPruqJNb0d7JDTx93E6zjhwg6rxAzrmvUN8LL5Ku9m4RPsSBoN3Wqy7lD5a2EVHhXuGTvOcPhNKCckK/Q==
   dependencies:
     "@semo/core" "^0.0.39"
     boxen "^4.2.0"

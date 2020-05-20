@@ -47,6 +47,6 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.2.2",
     "nunjucks": "^3.2.1",
-    "semo-plugin-serve": "^0.0.6"
+    "semo-plugin-serve": "^0.0.8"
   }
 }

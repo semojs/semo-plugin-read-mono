@@ -7903,10 +7903,10 @@ sdk-base@^2.0.1:
   dependencies:
     get-ready "~1.0.0"
 
-semo-plugin-serve@^0.0.6:
-  version "0.0.6"
-  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-0.0.6.tgz#e03de5a95d327dcb5e2de36f14d440ea7d0bd1cc"
-  integrity sha512-ddDpthXFRSc2Jt9yRuL6tlBw5SdTuzSlzu+oTEk7th/94AawwoDSu1C6WyGSGFd3Ui1QX2edTKB2rYRAitQDzQ==
+semo-plugin-serve@^0.0.8:
+  version "0.0.8"
+  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-0.0.8.tgz#dddd81874fb8e59b3b1a4e728d7305b27f3decca"
+  integrity sha512-eBtLnFPruqJNb0d7JDTx93E6zjhwg6rxAzrmvUN8LL5Ku9m4RPsSBoN3Wqy7lD5a2EVHhXuGTvOcPhNKCckK/Q==
   dependencies:
     "@semo/core" "^0.0.39"
     boxen "^4.2.0"

@@ -48,7 +48,7 @@
     "marked-terminal": "^3.3.0",
     "mkdirp": "^0.5.1",
     "nunjucks": "^3.2.0",
-    "semo-plugin-serve": "^0.0.7",
+    "semo-plugin-serve": "^0.0.8",
     "shelljs": "^0.8.3",
     "turndown": "^5.0.3",
     "turndown-plugin-gfm": "^1.0.2",
