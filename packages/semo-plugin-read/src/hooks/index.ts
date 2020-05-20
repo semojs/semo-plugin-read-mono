@@ -1,6 +1,6 @@
 export const hook_hook = {
   read_define_format: 'Define plugin supported formats.',
-  read_format: 'Custom your own format to convert input markdown code.',
+  read_implement_format: 'Custom your own format to convert input markdown code.',
   read_domain: 'Custom preprocessor and postprocessor of your favorate domain.'
 }
 

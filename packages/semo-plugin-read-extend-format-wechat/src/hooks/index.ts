@@ -18,7 +18,7 @@ export const hook_read_define_format = {
   wechat: '基于 Markdown 的微信公众号文章编辑器'
 }
 
-export const hook_read_format = {
+export const hook_read_implement_format = {
   wechat: async ({ title, markdown, converted, argv }) => {
     const app = new Koa()
     var router = new Router();

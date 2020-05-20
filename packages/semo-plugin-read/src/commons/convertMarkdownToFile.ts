@@ -39,7 +39,7 @@ const convertMarkdownToFile = async ({ format, title, markdown, argv, converted 
     mkdirp.sync(dir)
   }
 
-  const extendFormats = await Utils.invokeHook('read_format')
+  const extendFormats = await Utils.invokeHook('read_implement_format')
   if (extendFormats[format]) {
     if (Utils._.isFunction(extendFormats[format])) {
       await ((extendFormats[format])({ format, title, markdown, argv, converted }))
@@ -47,10 +47,7 @@ const convertMarkdownToFile = async ({ format, title, markdown, argv, converted 
     } else {
       throw new Error(`Format ${format} exist, but handler is not a function.`)
     }
-  }
-  
-
-  if (['html', 'pdf', 'png', 'jpeg'].includes(format)) {
+  } else if (['html', 'pdf', 'png', 'jpeg'].includes(format)) {
 
     // markdown is temp file in this process
     const mdName = `/tmp/semo-plugin-read/${title}.md`

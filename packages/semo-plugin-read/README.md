@@ -120,18 +120,18 @@ semo read README.md # 欣赏一下自己项目的 README
 
 ```
 hook_read_define_format
-hook_read_format
+hook_read_implement_format
 hook_read_domain
 ```
 
-`hook_read_define_format` 这个钩子只是为了声明，不参与逻辑，一般跟 `hook_read_format` 成对使用。具体的插件开发方法请参考 `semo` 官方文档或参考项目代码。
+`hook_read_define_format` 这个钩子只是为了声明，不参与逻辑，一般跟 `hook_read_implement_format` 成对使用。具体的插件开发方法请参考 `semo` 官方文档或参考项目代码。
 
 ### 扩展格式示例
 
 ```js
 // semo new semo-plugin-read-extend-format-super
 // src/hooks/index.ts
-export const hook_read_format = {
+export const hook_read_implement_format = {
   super: async ({ title, markdown, converted, argv }) => {
     // implement your super format.
   }
