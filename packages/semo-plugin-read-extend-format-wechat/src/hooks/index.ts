@@ -1,14 +1,11 @@
 import Koa from 'koa'
+import Router from 'koa-router'
 import views from 'koa-views'
 import serve from 'koa-static'
-import Router from 'koa-router'
-
-import open from 'open'
-import boxen from 'boxen'
-import _ from 'lodash'
-import chalk from 'chalk'
 
 import axios from 'axios'
+
+import { startServer } from 'semo-plugin-serve'
 
 /**
  * 实现钩子： read_define_format
@@ -53,31 +50,8 @@ export const hook_read_implement_format = {
       });
     });
 
-    // 清除终端，copy from package: react-dev-utils
-    function clearConsole() {
-      process.stdout.write(
-        process.platform === 'win32' ? '\x1B[2J\x1B[0f' : '\x1B[2J\x1B[3J\x1B[H'
-      );
-    }
-
-    if (argv.clearConsole) {
-      process.stdout.isTTY && clearConsole()
-    }
-
-    const box: any = ['Read the article on your default browser...', '']
-    box.push(chalk.bold(`Local: `) + chalk.green(argv.localhost))
-    if (argv.nethost) {
-      box.push(chalk.bold(`WLAN: `) + chalk.green(argv.nethost))
-    }
-
-    app.listen(argv.port)
-    if (argv.openBrowser) {
-      await open(argv.nethost || argv.localhost)
-    }
-    console.log(boxen(box.join('\n'), {
-      margin: 1,
-      padding: 1,
-      borderColor: 'green'
-    }))
+    await startServer({
+      port: argv.port
+    }, app)
   }
 }
