@@ -21,11 +21,9 @@ export const builder = function (yargs: any) {
   yargs.option('read-only', { describe: 'Only render html, used with web format.', alias: 'ro' })
   yargs.option('debug', { describe: 'Check middle code, used with web format, default is parsed markdown, debug=html will show parsed html' })
   yargs.option('proxy', { describe: 'Proxy images to prevent anti-hotlinking.', alias: 'P' })
-  yargs.option('port', { describe: 'Web server port.' })
+  yargs.option('port', { default: 3000, describe: 'Web server port.' })
   yargs.option('localhost', { describe: 'Localhost host with port, auto set and you can change.' })
   yargs.option('nethost', { describe: 'WLAN host with port, auto set and you can change.' })
-  yargs.option('open-browser', { describe: 'Auto open browser in web format.', alias: ['open', 'ob'] })
-  yargs.option('clear-console', { describe: 'Auto clear console.', alias: 'clear' })
 
   yargs.option('title', { default: true, describe: 'Prepend title, use no-title to disable.' })
   yargs.option('footer', { default: true, describe: 'Append footer, use no-footer to disable.' })
