@@ -12,7 +12,7 @@ import { startServer } from 'semo-plugin-serve'
  * 定义支持的格式
  */
 export const hook_read_define_format = {
-  wechat: '基于 Markdown 的微信公众号文章编辑器'
+  wechat: '基于 Markdown 的微信公众号文章编辑器，基于国产的 Markdown Nice'
 }
 
 export const hook_read_implement_format = {

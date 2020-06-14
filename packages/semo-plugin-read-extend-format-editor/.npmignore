@@ -1,0 +1,10 @@
+docs
+.vscode
+.travis.yml
+/src
+.editorconfig
+.eslintignore
+.eslintrc.js
+tsconfig.json
+mix-manifest.json
+assets/index.js.LICENSE.txt

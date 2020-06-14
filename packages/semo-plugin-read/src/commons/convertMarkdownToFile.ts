@@ -10,16 +10,7 @@ import shell from 'shelljs'
 import marked from 'marked'
 import TerminalRenderer from 'marked-terminal'
 
-import Koa from 'koa'
-import views from 'koa-views'
-import serve from 'koa-static'
-import Router from 'koa-router'
-
-import axios from 'axios'
-
 import { Utils } from '@semo/core'
-
-import { startServer } from 'semo-plugin-serve'
 
 const convertMarkdownToFile = async ({ format, title, markdown, argv, converted }) => {
   let dir = Utils._.get(argv, 'semo-plugin-read.directory', argv.dir)
@@ -102,58 +93,6 @@ const convertMarkdownToFile = async ({ format, title, markdown, argv, converted 
     } else {
       console.log('.mobi format need ebook-convert of Calibre installed first.')
     }
-  } else if (format === 'web') {
-    const app = new Koa()
-    var router = new Router();
- 
-    router.get('/proxy/(.*)', async (ctx, next) => {
-      const proxyUrl = ctx.request.url.substring(7)
-      return axios({
-        url: proxyUrl,
-        responseType: 'stream'
-      }).then(response => {
-        ctx.type = response.headers['content-type']
-        ctx.body = response.data
-      })
-    });
-
-    app.use(router.routes())
-
-    app.use(views(__dirname + '/../../views', {
-      map: {
-        html: 'nunjucks',
-        extension: 'html'
-      }
-    }));
-
-    app.use(serve(__dirname + '/../../assets'))
-
-    app.use(async function (ctx) {
-      if (argv.debug) {
-        if (argv.debug !== 'html') {
-          return await ctx.render('index-debug.html', {
-            html: markdown
-          });
-        } else {
-          return await ctx.render('index-debug.html', {
-            html: converted && converted.content ? converted.content : 'No content'
-          });
-        }
-      } else if (argv.readOnly) {
-        return await ctx.render('index-read-only.html', {
-          title, body: marked(markdown)
-        });
-      } else {
-        return await ctx.render('index.html', {
-          title, markdown
-        });
-      }
-    });
-
-    await startServer({
-      port: argv.port
-    }, app)
-    
   } else {
     throw new Error('Unsupported format!')
   }

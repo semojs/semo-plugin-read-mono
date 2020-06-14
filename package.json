@@ -5,10 +5,15 @@
     "test": "exit 0",
     "lerna": "lerna",
     "prepublish": "lerna run prepublish",
-    "lerna:publish": "lerna publish from-git --yes"
+    "lerna:publish": "lerna publish from-git --yes",
+    "upgrade:preview": "lerna exec -- ncu && ncu",
+    "upgrade:all": "lerna exec -- ncu -u --timeout 30000 && lerna exec -- yarn && ncu -u --timeout 30000 && yarn",
+    "deploy:major": "lerna version major",
+    "deploy:minor": "lerna version minor",
+    "deploy": "lerna version patch -y"
   },
   "devDependencies": {
-    "lerna": "^3.19.0"
+    "lerna": "^3.22.1"
   },
   "dependencies": {}
 }

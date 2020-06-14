@@ -15,7 +15,10 @@ export const hook_read_define_format = {
   },
   pdf: 'PDF 格式，基于 puppeteer',
   png: 'PNG 格式，基于 puppeteer',
-  jpeg: 'JPEG 格式，基于 puppeteer',
+  jpeg: {
+    describe: 'JPEG 格式，基于 puppeteer',
+    alias: 'jpg'
+  },
   html: 'HTML 格式，基于 puppeteer',
   less: '终端阅读，Markdown 语法高亮',
   console: '终端直接输出',

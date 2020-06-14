@@ -1,11 +1,11 @@
 # semo-plugin-read-extend-format-wechat
 
-这是一个 `semo-plugin-read`的插件， 为其添加了一个微信公众号编辑器的格式支持。
+这是一个 `semo-plugin-read`的插件， 为其添加了一个微信公众号编辑器的格式支持，基于国产的 Markdown Nice。
 
 ## 用法
 
 ```
-npm i -g @semo/js semo-plugin-read semo-plugin-read-extend-format-wechat
+npm i -g @semo/cli semo-plugin-read semo-plugin-read-extend-format-wechat
 semo read --help
 semo read -A
 semo read URL --format=wechat

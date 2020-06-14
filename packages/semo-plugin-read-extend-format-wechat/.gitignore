@@ -90,3 +90,5 @@ typings/
 # Custom
 /lib
 yarn-error.log
+mix-manifest.json
+assets/index.js.LICENSE.txt

@@ -25,9 +25,9 @@ export const builder = function (yargs: any) {
   yargs.option('localhost', { describe: 'Localhost host with port, auto set and you can change.' })
   yargs.option('nethost', { describe: 'WLAN host with port, auto set and you can change.' })
 
-  yargs.option('title', { default: true, describe: 'Prepend title, use no-title to disable.' })
+  yargs.option('title', { describe: 'Prepend title, use no-title to disable.' })
   yargs.option('footer', { default: true, describe: 'Append footer, use no-footer to disable.' })
-  yargs.option('toc', { default: true, describe: 'Include TOC' })
+  yargs.option('toc', { describe: 'Include TOC' })
 
   yargs.option('rename', { describe: 'New name, with extension.', alias: 'R' })
   yargs.option('directory', { describe: 'Location for output.', alias: 'dir' })
@@ -54,8 +54,8 @@ export const handler = async function (argv: any) {
     })
 
     console.log(Utils.chalk.green('\nSupported formats: --format=[FORMAT]\n'))
-    console.log(Utils.table(rows))
-    process.exit(1)
+    Utils.outputTable(rows)
+    process.exit(0)
   }
 
   // Even the format is not web or mobi, other plugins may need these values

@@ -11,3 +11,5 @@ tsconfig.json
 views/index.js
 views/components/*
 yarn-error.log
+mix-manifest.json
+assets/index.js.LICENSE.txt
