@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-editor",
-  "version": "0.0.0",
+  "version": "0.4.0",
   "description": "A plugin of semo-plugin-read, provide markdown editor format",
   "keywords": [
     "cli",
@@ -16,7 +16,6 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "license": "MIT",
-  "peerDependencies": {},
   "devDependencies": {
     "@babel/preset-react": "^7.10.1",
     "@types/node": "^14.0.11",
