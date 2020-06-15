@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-editor",
-  "version": "0.4.2",
+  "version": "0.5.0",
   "description": "A plugin of semo-plugin-read, provide markdown editor format",
   "keywords": [
     "cli",
