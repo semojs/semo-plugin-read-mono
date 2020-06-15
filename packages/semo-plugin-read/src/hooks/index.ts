@@ -1,8 +1,6 @@
 import markdownHandler from '../commons/formatHandlers/markdown'
 import debugHandler from '../commons/formatHandlers/debug'
 import consoleHandler from '../commons/formatHandlers/console'
-import epubHandler from '../commons/formatHandlers/epub'
-import mobiHandler from '../commons/formatHandlers/mobi'
 
 export const hook_hook = {
   read_define_format: 'Define plugin supported formats.',
