@@ -6,6 +6,7 @@ import chalk from 'chalk'
 import os from 'os'
 import getPort from 'get-port'
 import _ from 'lodash'
+import mkdirp from 'mkdirp'
 import { Utils } from '@semo/core'
 
 export const disabled = false // Set to true to disable this command temporarily
@@ -57,6 +58,23 @@ export const handler = async function (argv: any) {
     Utils.outputTable(rows)
     process.exit(0)
   }
+
+  let dir = Utils._.get(argv, 'semo-plugin-read.directory', argv.dir)
+  if (dir) {
+    if (dir[0] === '~') {
+      dir = dir.replace(/^~/, process.env.HOME)
+    } else {
+      dir = path.resolve(process.cwd(), dir)
+    }
+  } else {
+    dir = process.cwd()
+  }
+
+  if (!fs.existsSync(dir)) {
+    mkdirp.sync(dir)
+  }
+
+  argv.dir = dir
 
   // Even the format is not web or mobi, other plugins may need these values
   let port = await getPort()

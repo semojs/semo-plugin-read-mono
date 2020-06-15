@@ -23,8 +23,7 @@ const convertUrlToMarkdown = async (argv) => {
 
   // 初始化转换库
   const turndownService = new TurndownService({
-    codeBlockStyle: 'fenced',
-    fence: '\n```'
+    codeBlockStyle: ['console', 'mobi'].includes(argv.format) ? 'indented' : 'fenced',
   })
   turndownService.use(tables)
 
@@ -64,7 +63,6 @@ const convertUrlToMarkdown = async (argv) => {
 
   // 转化为 Markdown
   let markdown = turndownService.turndown(content)
-
   if (argv.footer) {
     markdown = `${markdown}\n\n---\n\n[Original URL](${argv.url})`
   }

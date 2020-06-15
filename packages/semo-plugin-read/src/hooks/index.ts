@@ -1,6 +1,11 @@
+import markdownHandler from '../commons/formatHandlers/markdown'
+import debugHandler from '../commons/formatHandlers/debug'
+import consoleHandler from '../commons/formatHandlers/console'
+import epubHandler from '../commons/formatHandlers/epub'
+import mobiHandler from '../commons/formatHandlers/mobi'
+
 export const hook_hook = {
   read_define_format: 'Define plugin supported formats.',
-  read_implement_format: 'Custom your own format to convert input markdown code.',
   read_domain: 'Custom preprocessor and postprocessor of your favorate domain.'
 }
 
@@ -11,18 +16,15 @@ export const hook_hook = {
 export const hook_read_define_format = {
   markdown: {
     describe: 'Markdown 格式',
-    alias: 'md'
+    alias: 'md',
+    handler: markdownHandler
   },
-  pdf: 'PDF 格式，基于 puppeteer',
-  png: 'PNG 格式，基于 puppeteer',
-  jpeg: {
-    describe: 'JPEG 格式，基于 puppeteer',
-    alias: 'jpg'
+  debug: {
+    describe: '查看识别到的中间 HTML 结果',
+    handler: debugHandler
   },
-  html: 'HTML 格式，基于 puppeteer',
-  less: '终端阅读，Markdown 语法高亮',
-  console: '终端直接输出',
-  web: 'Markdown 在线编辑器模式',
-  epub: 'EPUB 格式，基于 Pandoc',
-  mobi: 'MOBI 格式，基于 Calibre 的 ebook-convert',
+  console: {
+    describe: '终端直接输出',
+    handler: consoleHandler
+  },
 }

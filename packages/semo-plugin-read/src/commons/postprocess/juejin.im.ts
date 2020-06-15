@@ -1,7 +1,6 @@
 export default (markdown, argv) => {
-  
   // 去掉网页复制代码功能带来的干扰
-  markdown = markdown.replace(/\s+复制代码\n/g, '')
+  markdown = markdown.replace(/\s+复制代码/g, '')
 
   // 过滤掉锚点里的外链
   markdown = markdown.replace(/\[(.*?)\]\((.*?)#(.*?)\)/g, (match, p1, p2, p3) => {

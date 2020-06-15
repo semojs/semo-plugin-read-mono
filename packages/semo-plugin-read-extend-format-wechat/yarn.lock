@@ -6466,10 +6466,10 @@ markdown-it@^8.4.2:
     mdurl "^1.0.1"
     uc.micro "^1.0.5"
 
-markdown-nice@^1.8.4:
-  version "1.8.4"
-  resolved "https://registry.yarnpkg.com/markdown-nice/-/markdown-nice-1.8.4.tgz#8e542654fd6bcb7cf35001c522607a95582a01b2"
-  integrity sha512-pqCHx2UAMXGkcDYqmPXdGmCmV40soK+gL0/v6NeCIAGkRZDqoJ144wP3kBEveXBpwQ3fS0+h91ULq0ImW7l11g==
+markdown-nice@^1.8.5:
+  version "1.8.5"
+  resolved "https://registry.yarnpkg.com/markdown-nice/-/markdown-nice-1.8.5.tgz#a30c4a19e2ea6a8803f780c5af9a0abc1b0d9bb3"
+  integrity sha512-iw84VLgnA9aF3P3HY7pyvtPsjfsFYD79OBrpoZdygWPH4BTJB9PB7FdWTYh4/aMpzJnROkjnUrawfVnudsNKog==
   dependencies:
     "@sitdown/juejin" "^1.1.1"
     "@sitdown/wechat" "^1.1.4"

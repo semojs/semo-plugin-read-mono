@@ -5,7 +5,7 @@
 ## 用法
 
 ```
-npm i -g @semo/js semo-plugin-read semo-plugin-read-extend-format-editor
+npm i -g @semo/cli semo-plugin-read semo-plugin-read-extend-format-editor
 semo read --help
 semo read -A
 semo read URL --format=editor
