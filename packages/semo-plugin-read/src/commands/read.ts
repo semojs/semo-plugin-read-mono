@@ -19,8 +19,6 @@ export const builder = function (yargs: any) {
   yargs.option('format', { default: 'markdown', describe: 'Output format, use --available-formats to see all supported formats, default: markdown.', alias: 'F' })
   
   // web format related
-  yargs.option('read-only', { describe: 'Only render html, used with web format.', alias: 'ro' })
-  yargs.option('debug', { describe: 'Check middle code, used with web format, default is parsed markdown, debug=html will show parsed html' })
   yargs.option('proxy', { describe: 'Proxy images to prevent anti-hotlinking.', alias: 'P' })
   yargs.option('port', { default: 3000, describe: 'Web server port.' })
   yargs.option('localhost', { describe: 'Localhost host with port, auto set and you can change.' })
@@ -31,7 +29,7 @@ export const builder = function (yargs: any) {
   yargs.option('toc', { describe: 'Include TOC' })
 
   yargs.option('rename', { describe: 'New name, with extension.', alias: 'R' })
-  yargs.option('directory', { describe: 'Location for output.', alias: 'dir' })
+  yargs.option('output', { describe: 'Location for output.', alias: 'O' })
 
   yargs.option('available-formats', { describe: 'List all supported formats', alias: 'A' })
 }
