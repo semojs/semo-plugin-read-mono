@@ -15,19 +15,20 @@ semo read [url]
 Parse and read a url or a md file with your favorate format.
 
 选项：
-  --format, -F                  Output format, use --available-formats to see all supported formats,
-                                default: markdown.                                 [Default: "markdown"]
-  --port                        Web server port.
-  --localhost                   Localhost host with port, auto set and you can change.
-  --nethost                     WLAN host with port, auto set and you can change.
-  --open-browser, --open, --ob  Auto open browser in web format.
-  --clear-console, --clear      Auto clear console.
-  --title                       Prepend title, use no-title to disable.                  [Default: true]
-  --footer                      Append footer, use no-footer to disable.                 [Default: true]
-  --toc                         Include TOC                                              [Default: true]
-  --rename, -R                  New name, with extension.
-  --output, -O            Location for output.
-  --available-formats, -A       List supported formats
+  --format, -F             Output format, use --available-formats to see all supported formats, default: markdown.
+                                                                                                    [默认值: "markdown"]
+  --clipboard, -C          Input from clipboard
+  --proxy, -P              Proxy images to prevent anti-hotlinking.
+  --port                   Web server port.                                                               [默认值: 3000]
+  --localhost              Localhost host with port, auto set and you can change.
+  --nethost                WLAN host with port, auto set and you can change.
+  --domain                 Set source input from which domain, without protocol and www.
+  --title                  Prepend title, use no-title to disable.
+  --footer                 Append footer, use no-footer to disable.                                       [默认值: true]
+  --toc                    Include TOC
+  --rename, -R             New name, with extension.
+  --output, -O             Location for output.
+  --available-formats, -A  List all supported formats
 ```
 
 ## Extend plugin

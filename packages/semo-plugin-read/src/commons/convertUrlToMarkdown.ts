@@ -4,6 +4,8 @@ import TurndownService from 'turndown'
 import { tables } from 'turndown-plugin-gfm'
 import parse from 'url-parse'
 
+import clipboardy from 'clipboardy'
+
 import * as globalProcessHandler from '../commons/processHandlers/global'
 
 import { Utils } from '@semo/core'
@@ -11,10 +13,21 @@ import { Utils } from '@semo/core'
 const promiseRead = util.promisify(read)
 
 const convertUrlToMarkdown = async (argv) => {
+
+  if (argv.clipboard) {
+    Utils.info('Get input source from clipboard.')
+    argv.url = clipboardy.readSync()
+  }
+
+  if (!argv.url) {
+    return { title: '', markdown: '', content:'', article: null}
+  }
+
   // 获取域名标识
-  const url = parse(argv.url)
-  const domain = url.host.replace(/^www\./, '')
-  argv.domain = domain
+  if (!argv.domain && argv.url && argv.url.startsWith('http') && argv.url.length < 255) {
+    const url = parse(argv.url)
+    argv.domain = url.host.replace(/^www\./, '')
+  }
 
   const extendDomains = await Utils.invokeHook('read_domain')
 
@@ -31,10 +44,12 @@ const convertUrlToMarkdown = async (argv) => {
       // HTML 预处理
       source = globalProcessHandler.preprocess(source, argv)
       try {
-        if (extendDomains[domain] && extendDomains[domain].preprocess && Utils._.isFunction(extendDomains[domain].preprocess)) {
-          const newSource = extendDomains[domain].preprocess(source, argv)
-          if (newSource && Utils._.isString(newSource)) {
-            markdown = newSource
+        if (argv.domain) {
+          if (extendDomains[argv.domain] && extendDomains[argv.domain].preprocess && Utils._.isFunction(extendDomains[argv.domain].preprocess)) {
+            const newSource = extendDomains[argv.domain].preprocess(source, argv)
+            if (newSource && Utils._.isString(newSource)) {
+              markdown = newSource
+            }
           }
         }
       } catch (e) {}
@@ -56,17 +71,19 @@ const convertUrlToMarkdown = async (argv) => {
 
   // 转化为 Markdown
   let markdown = turndownService.turndown(content)
-  if (argv.footer) {
+  if (argv.footer && argv.url && argv.url.startsWith('http') && argv.url.length < 255) {
     markdown = `${markdown}\n\n---\n\n[Original URL](${argv.url})`
   }
 
   // Markdown 后处理
   markdown = globalProcessHandler.postprocess(markdown, argv)
   try {
-    if (extendDomains[domain] && extendDomains[domain].postprocess && Utils._.isFunction(extendDomains[domain].postprocess)) {
-      const newMarkdown = extendDomains[domain].postprocess(markdown, argv)
-      if (newMarkdown && Utils._.isString(newMarkdown)) {
-        markdown = newMarkdown
+    if (argv.domain) {
+      if (extendDomains[argv.domain] && extendDomains[argv.domain].postprocess && Utils._.isFunction(extendDomains[argv.domain].postprocess)) {
+        const newMarkdown = extendDomains[argv.domain].postprocess(markdown, argv)
+        if (newMarkdown && Utils._.isString(newMarkdown)) {
+          markdown = newMarkdown
+        }
       }
     }
   } catch (e) {}

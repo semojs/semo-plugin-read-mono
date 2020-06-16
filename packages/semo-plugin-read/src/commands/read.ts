@@ -7,6 +7,7 @@ import os from 'os'
 import getPort from 'get-port'
 import _ from 'lodash'
 import mkdirp from 'mkdirp'
+
 import { Utils } from '@semo/core'
 
 export const disabled = false // Set to true to disable this command temporarily
@@ -17,12 +18,14 @@ export const desc = 'Parse and read a url or a md file with your favorate format
 
 export const builder = function (yargs: any) {
   yargs.option('format', { default: 'markdown', describe: 'Output format, use --available-formats to see all supported formats, default: markdown.', alias: 'F' })
-  
+  yargs.option('clipboard', { describe: 'Input from clipboard', alias: 'C'})
+
   // web format related
   yargs.option('proxy', { describe: 'Proxy images to prevent anti-hotlinking.', alias: 'P' })
   yargs.option('port', { default: 3000, describe: 'Web server port.' })
   yargs.option('localhost', { describe: 'Localhost host with port, auto set and you can change.' })
   yargs.option('nethost', { describe: 'WLAN host with port, auto set and you can change.' })
+  yargs.option('domain', { describe: 'Set source input from which domain, without protocol and www.' })
 
   yargs.option('title', { describe: 'Prepend title, use no-title to disable.' })
   yargs.option('footer', { default: true, describe: 'Append footer, use no-footer to disable.' })
@@ -57,7 +60,7 @@ export const handler = async function (argv: any) {
     process.exit(0)
   }
 
-  let output = Utils._.get(argv, 'semo-plugin-read.directory', argv.output)
+  let output = Utils._.get(argv, 'semo-plugin-read.output', argv.output)
   if (output) {
     if (output[0] === '~') {
       output = output.replace(/^~/, process.env.HOME)
@@ -92,15 +95,11 @@ export const handler = async function (argv: any) {
   cache.set('argv', argv) // set argv again
 
   try {
-    if (!argv.url || argv.url.match(/\.md$/) && !argv.url.match(/^http/)) {
-      if (!argv.url) {
-        title = markdown = ''
-      } else {
-        // local
-        let filePath = argv.url[0] !== '/' ? path.resolve(process.cwd(), argv.url) : argv.url
-        markdown = fs.readFileSync(filePath, { encoding: 'utf8' })
-        title = path.basename(filePath, '.md')
-      }
+    if (argv.url && argv.url.match(/\.md$/) && !argv.url.match(/^http/)) {
+      // local
+      let filePath = argv.url[0] !== '/' ? path.resolve(process.cwd(), argv.url) : argv.url
+      markdown = fs.readFileSync(filePath, { encoding: 'utf8' })
+      title = path.basename(filePath, '.md')
     } else {
       converted = await convertUrlToMarkdown(argv)
       if (!converted) {

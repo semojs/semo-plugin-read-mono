@@ -1,6 +1,8 @@
 import markdownHandler from '../commons/formatHandlers/markdown'
 import debugHandler from '../commons/formatHandlers/debug'
 import consoleHandler from '../commons/formatHandlers/console'
+import clipboardHandler from '../commons/formatHandlers/clipboard'
+
 
 export const hook_hook = {
   read_define_format: 'Define plugin supported formats.',
@@ -25,4 +27,8 @@ export const hook_read_define_format = {
     describe: '终端直接输出',
     handler: consoleHandler
   },
+  clipboard: {
+    describe: '输出到剪切板',
+    handler: clipboardHandler
+  }
 }

@@ -29,6 +29,7 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
+    "semo": "SEMO_PLUGIN_DIR=.. semo",
     "watch": "tsc -w",
     "build": "tsc",
     "clean": "rimraf lib",
@@ -37,6 +38,7 @@
   "dependencies": {
     "@semo/core": "^0.8.6",
     "@vipzhichengfork/node-readability": "^1.0.5",
+    "clipboardy": "^2.3.0",
     "get-port": "^5.1.1",
     "marked": "^1.1.0",
     "marked-terminal": "^4.1.0",
