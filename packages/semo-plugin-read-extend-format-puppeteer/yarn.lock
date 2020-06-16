@@ -135,10 +135,10 @@
     minimist "^1.2.0"
     request "^2.88.0"
 
-"@vipzhichengfork/pretty-markdown-pdf@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vipzhichengfork/pretty-markdown-pdf/-/pretty-markdown-pdf-1.0.3.tgz#e1dcefa1477aad612e2745120f1c8cfacf8a0e91"
-  integrity sha512-S7B75Zbxca5vg4UVsl995R3yhLTehD+c2DZyN3/T+KzYdCsWJg2jvif+lwi8aKSgrtc3NLuOf90NfeXLvrQHUg==
+"@vipzhichengfork/pretty-markdown-pdf@^1.0.4":
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/@vipzhichengfork/pretty-markdown-pdf/-/pretty-markdown-pdf-1.0.4.tgz#dbf15b99fd532bb0255bbf49e34a3422bca9946e"
+  integrity sha512-9wXSOgJl0ijfIF+8NdpQmgLoV1lWBAMV47zU/moVDlkwKKsTR0WUovJWvrbSng4/SC0xMe9lS+DP4d5xxa5ODQ==
   dependencies:
     cheerio "^1.0.0-rc.3"
     emoji-images "^0.1.1"
@@ -2409,10 +2409,10 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-semo-plugin-read@^0.5.8:
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-0.5.8.tgz#c88c1f46a98bbf0b043d9cba5e49ff17149bf9a3"
-  integrity sha512-TwNGcmE3AXLpETsMe6bSgjUB/w1ACujD2cta/cTZzhlHoYzyd0IsHItY/x4RpKgarlhQx7CHBozeBjBglNkY6A==
+semo-plugin-read@^0.5.9:
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-0.5.9.tgz#bdbbf252e5f05cb5ed5d34f480193f1dd69ebffa"
+  integrity sha512-6liIiDU/PtCOSNErW9S47zzW8HqnC9ghJhkodChrbpub2Q73EXEbhtsUp8Zek5MExBOMVNdxfOUQiLpVHprUZQ==
   dependencies:
     "@semo/core" "^0.8.6"
     "@vipzhichengfork/node-readability" "^1.0.5"
