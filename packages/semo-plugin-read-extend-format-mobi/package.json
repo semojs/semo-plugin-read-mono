@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-mobi",
-  "version": "0.5.1",
+  "version": "0.5.4",
   "description": "A plugin of semo-plugin-read, provide formats of mobi.",
   "keywords": [
     "cli",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@semo/core": "^0.6.7",
-    "semo-plugin-read": "^0.5.3"
+    "semo-plugin-read": "^0.5.4"
   },
   "publishConfig": {
     "access": "public"
