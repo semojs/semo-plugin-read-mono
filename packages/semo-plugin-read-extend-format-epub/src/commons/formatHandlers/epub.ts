@@ -11,7 +11,7 @@ export = async ({ format, title, markdown, argv, converted }) => {
     mkdirp.sync(path.dirname(mdName))
     fs.writeFileSync(mdName, markdown)
 
-    Utils.shell.exec(`pandoc --metadata title="${title}" "${mdName}" -o "${argv.dir}/${title.replace(/(\s+)/g, '\\$1')}.epub" `)
+    Utils.shell.exec(`pandoc --metadata title="${title}" "${mdName}" -o "${argv.dir}/${title}.epub" `)
 
     fs.unlinkSync(mdName)
     Utils.success(`Saved to ${Utils.chalk.yellow(argv.dir + '/' + title + '.epub')} successfully.`)
