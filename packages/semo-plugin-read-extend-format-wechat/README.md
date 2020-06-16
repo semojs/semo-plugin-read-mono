@@ -2,7 +2,9 @@
 
 这是一个 `semo-plugin-read`的插件， 为其添加了一个微信公众号编辑器的格式支持，基于国产的 Markdown Nice。
 
-## 用法
+This is a plugin of `semo-plugin-read`, provide `wechat` format for editing in a online Wechat mp editor, based on [Markdown nice](https://github.com/mdnice/markdown-nice).
+
+## Usage
 
 ```
 npm i -g @semo/cli semo-plugin-read semo-plugin-read-extend-format-wechat
@@ -13,9 +15,10 @@ semo read URL --format=wechat
 
 ## semo-plugin-read
 
-`semo-plugin-read` 的作用是分析一个网页的主要内容，并处理成自己想要的格式。主要是为了帮助把喜欢的网页内容收藏和处理成想要的格式，便于整理。
+This is a Semo plugin, to provide a cli tool to grab web page and process to many useful formats for learning purpose.
 
-## 协议
+## License
 
 MIT
+
 

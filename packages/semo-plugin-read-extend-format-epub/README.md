@@ -1,8 +1,8 @@
 # semo-plugin-read-extend-format-epub
 
-这是一个 `semo-plugin-read`的插件， 为其添加了 epub 格式，基于 pandoc
+This is a plugin of `semo-plugin-read`, provide `epub` format, based on `pandoc`.
 
-## 用法
+## Usage
 
 ```
 npm i -g @semo/cli semo-plugin-read semo-plugin-read-extend-format-epub
@@ -13,9 +13,9 @@ semo read URL --format=epub
 
 ## semo-plugin-read
 
-`semo-plugin-read` 的作用是分析一个网页的主要内容，并处理成自己想要的格式。主要是为了帮助把喜欢的网页内容收藏和处理成想要的格式，便于整理。
+This is a Semo plugin, to provide a cli tool to grab web page and process to many useful formats for learning purpose.
 
-## 协议
+## License
 
 MIT
 

@@ -1,7 +1,7 @@
 {
   "name": "semo-plugin-read",
   "version": "0.6.2",
-  "description": "A tool which convert url pages to markdown and many other formats, based on Semo",
+  "description": "A tool which convert web pages to markdown and many other formats, based on Semo",
   "keywords": [
     "cli",
     "command",

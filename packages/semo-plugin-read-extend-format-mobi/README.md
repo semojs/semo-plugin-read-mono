@@ -1,8 +1,8 @@
 # semo-plugin-read-extend-format-mobi
 
-这是一个 `semo-plugin-read`的插件， 为其添加了 mobi 格式，基于 ebook-convert, 这个命令行工具只要安装了著名的 `calibre` 就会有。
+This is a plugin of `semo-plugin-read`, provide `mobi` format for Kindle, based on `ebook-convert` which is shipped with `Calibre`
 
-## 用法
+## Usage
 
 ```
 npm i -g @semo/cli semo-plugin-read semo-plugin-read-extend-format-mobi
@@ -13,9 +13,10 @@ semo read URL --format=mobi
 
 ## semo-plugin-read
 
-`semo-plugin-read` 的作用是分析一个网页的主要内容，并处理成自己想要的格式。主要是为了帮助把喜欢的网页内容收藏和处理成想要的格式，便于整理。
+This is a Semo plugin, to provide a cli tool to grab web page and process to many useful formats for learning purpose.
 
-## 协议
+## License
 
 MIT
+
 
