@@ -6,8 +6,7 @@ import TurndownService from 'turndown'
 import { tables } from 'turndown-plugin-gfm'
 import parse from 'url-parse'
 
-import globalPreprocess from '../commons/preprocess/global'
-import globalPostprocess from '../commons/postprocess/global'
+import * as globalProcessHandler from '../commons/processHandlers/global'
 
 import { Utils } from '@semo/core'
 
@@ -32,17 +31,12 @@ const convertUrlToMarkdown = async (argv) => {
     preserveUnlikelyCandidates: true,
     preprocess: function(source, response, contentType, callback) {
       // HTML 预处理
-      source = globalPreprocess(source, argv)
+      source = globalProcessHandler.preprocess(source, argv)
       try {
         if (extendDomains[domain] && extendDomains[domain].preprocess && Utils._.isFunction(extendDomains[domain].preprocess)) {
           const newSource = extendDomains[domain].preprocess(source, argv)
           if (newSource && Utils._.isString(newSource)) {
             markdown = newSource
-          }
-        } else {
-          if (fs.existsSync(require.resolve(path.resolve(__dirname, `preprocess/${domain}`)))) {
-            const domainPreprocess = require(path.resolve(__dirname, `preprocess/${domain}`)).default
-            source = domainPreprocess(source, argv)
           }
         }
       } catch (e) {}
@@ -69,21 +63,14 @@ const convertUrlToMarkdown = async (argv) => {
   }
 
   // Markdown 后处理
-  markdown = globalPostprocess(markdown, argv)
+  markdown = globalProcessHandler.postprocess(markdown, argv)
   try {
     if (extendDomains[domain] && extendDomains[domain].postprocess && Utils._.isFunction(extendDomains[domain].postprocess)) {
       const newMarkdown = extendDomains[domain].postprocess(markdown, argv)
       if (newMarkdown && Utils._.isString(newMarkdown)) {
         markdown = newMarkdown
       }
-    } else {
-      if (fs.existsSync(require.resolve(path.resolve(__dirname, `postprocess/${domain}`)))) {
-        const domainPostprocess = require(path.resolve(__dirname, `postprocess/${domain}`)).default
-        markdown = domainPostprocess(markdown, argv)
-      }
     }
-
-    
   } catch (e) {}
 
   return { title: article.title, markdown, content, article }

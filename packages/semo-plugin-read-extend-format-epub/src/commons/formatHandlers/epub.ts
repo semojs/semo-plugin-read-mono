@@ -11,10 +11,10 @@ export = async ({ format, title, markdown, argv, converted }) => {
     mkdirp.sync(path.dirname(mdName))
     fs.writeFileSync(mdName, markdown)
 
-    Utils.shell.exec(`pandoc --metadata title="${title}" "${mdName}" -o "${argv.dir}/${title}.epub" --toc --toc-depth=2`)
+    Utils.shell.exec(`pandoc --metadata title="${title}" "${mdName}" -o "${argv.output}/${title}.epub" --toc --toc-depth=2`)
 
     fs.unlinkSync(mdName)
-    Utils.success(`Saved to ${Utils.chalk.yellow(argv.dir + '/' + title + '.epub')} successfully.`)
+    Utils.success(`Saved to ${Utils.chalk.yellow(argv.output + '/' + title + '.epub')} successfully.`)
   } else {
     console.log('.epub format need pandoc installed first.')
   }

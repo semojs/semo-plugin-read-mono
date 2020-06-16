@@ -1,4 +1,17 @@
-export default (markdown, argv) => {
+import cheerio from 'cheerio'
+
+export const preprocess = (html, argv) => {
+  
+  // 预解析，取文章的主要部分
+  const $ = cheerio.load(html)
+  const title = $('title').html()
+  let content = $('.article-content').html()
+  html = `<title>${title}</title>${content}`
+
+  return html
+}
+
+export const postprocess = (markdown, argv) => {
   // 去掉网页复制代码功能带来的干扰
   markdown = markdown.replace(/\s+复制代码/g, '')
 

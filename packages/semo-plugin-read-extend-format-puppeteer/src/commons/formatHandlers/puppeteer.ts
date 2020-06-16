@@ -17,7 +17,7 @@ export = async ({ format, title, markdown, argv, converted }) => {
   await convertMd({ 
     markdownFilePath: mdName, 
     outputFileType: format,
-    outputFilePath: path.resolve(argv.dir, `${title}.${format}`),
+    outputFilePath: path.resolve(argv.output, `${title}.${format}`),
     configFilePath: argv.configPath || path.resolve(__dirname, '../../config.json'),
     executablePath: argv.executablePath
   })

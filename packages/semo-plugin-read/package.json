@@ -37,7 +37,6 @@
   "dependencies": {
     "@semo/core": "^0.8.6",
     "@vipzhichengfork/node-readability": "^1.0.5",
-    "cheerio": "^1.0.0-rc.3",
     "get-port": "^5.1.1",
     "marked": "^1.1.0",
     "marked-terminal": "^4.1.0",

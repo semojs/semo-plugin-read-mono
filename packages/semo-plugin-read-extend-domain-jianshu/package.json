@@ -1,0 +1,46 @@
+{
+  "name": "semo-plugin-read-extend-domain-jianshu",
+  "version": "0.0.0",
+  "description": "A plugin of semo-plugin-read, provide pre/post process handler for domain jianshu.com.",
+  "keywords": [
+    "cli",
+    "markdown",
+    "reader",
+    "semo-plugin-read",
+    "domain"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/semojs/semo-plugin-read-mono"
+  },
+  "main": "lib/index.js",
+  "types": "lib/index.d.ts",
+  "license": "MIT",
+  "peerDependencies": {},
+  "devDependencies": {
+    "@types/node": "^14.0.11",
+    "@typescript-eslint/eslint-plugin": "^3.1.0",
+    "@typescript-eslint/parser": "^3.1.0",
+    "eslint": "^7.2.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "rimraf": "^3.0.2",
+    "typescript": "^3.9.5"
+  },
+  "scripts": {
+    "watch": "tsc -w",
+    "build": "tsc",
+    "clean": "rimraf lib",
+    "postversion": "git push && git push --tags",
+    "prepare": "npm run clean && npm run build",
+    "test": "exit 0"
+  },
+  "dependencies": {
+    "@semo/core": "^0.6.7"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

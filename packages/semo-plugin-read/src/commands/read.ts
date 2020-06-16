@@ -59,22 +59,22 @@ export const handler = async function (argv: any) {
     process.exit(0)
   }
 
-  let dir = Utils._.get(argv, 'semo-plugin-read.directory', argv.dir)
-  if (dir) {
-    if (dir[0] === '~') {
-      dir = dir.replace(/^~/, process.env.HOME)
+  let output = Utils._.get(argv, 'semo-plugin-read.directory', argv.output)
+  if (output) {
+    if (output[0] === '~') {
+      output = output.replace(/^~/, process.env.HOME)
     } else {
-      dir = path.resolve(process.cwd(), dir)
+      output = path.resolve(process.cwd(), output)
     }
   } else {
-    dir = process.cwd()
+    output = process.cwd()
   }
 
-  if (!fs.existsSync(dir)) {
-    mkdirp.sync(dir)
+  if (!fs.existsSync(output)) {
+    mkdirp.sync(output)
   }
 
-  argv.dir = dir
+  argv.output = output
 
   // Even the format is not web or mobi, other plugins may need these values
   let port = await getPort()

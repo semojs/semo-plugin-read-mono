@@ -11,10 +11,10 @@ export = async ({ format, title, markdown, argv, converted }) => {
     mkdirp.sync(path.dirname(mdName))
     fs.writeFileSync(mdName, markdown)
 
-    Utils.shell.exec(`ebook-convert "${mdName}" "${argv.dir}/${title}.mobi" --title "${title}" --authors ${argv.domain}`)
+    Utils.shell.exec(`ebook-convert "${mdName}" "${argv.output}/${title}.mobi" --title "${title}" --authors ${argv.domain}`)
 
     fs.unlinkSync(mdName)
-    Utils.success(`Saved to ${Utils.chalk.yellow(argv.dir + '/' + title + '.mobi')} successfully.`)
+    Utils.success(`Saved to ${Utils.chalk.yellow(argv.output + '/' + title + '.mobi')} successfully.`)
   } else {
     console.log('.mobi format need ebook-convert of Calibre installed first.')
   }
