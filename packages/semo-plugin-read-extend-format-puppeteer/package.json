@@ -37,7 +37,8 @@
   },
   "dependencies": {
     "@semo/core": "^0.6.7",
-    "@vipzhichengfork/pretty-markdown-pdf": "^1.0.1"
+    "@vipzhichengfork/pretty-markdown-pdf": "^1.0.1",
+    "semo-plugin-read": "^0.5.3"
   },
   "publishConfig": {
     "access": "public"

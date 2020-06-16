@@ -36,7 +36,8 @@
     "test": "exit 0"
   },
   "dependencies": {
-    "@semo/core": "^0.6.7"
+    "@semo/core": "^0.6.7",
+    "semo-plugin-read": "^0.5.3"
   },
   "publishConfig": {
     "access": "public"

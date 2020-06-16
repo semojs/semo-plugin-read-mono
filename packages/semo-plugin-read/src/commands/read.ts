@@ -33,7 +33,7 @@ export const builder = function (yargs: any) {
   yargs.option('rename', { describe: 'New name, with extension.', alias: 'R' })
   yargs.option('directory', { describe: 'Location for output.', alias: 'dir' })
 
-  yargs.option('available-formats', { describe: 'List supported formats', alias: 'A' })
+  yargs.option('available-formats', { describe: 'List all supported formats', alias: 'A' })
 }
 
 export const handler = async function (argv: any) {
