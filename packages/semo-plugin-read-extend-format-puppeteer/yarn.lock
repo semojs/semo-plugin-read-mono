@@ -18,32 +18,6 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@semo/core@^0.8.3":
-  version "0.8.4"
-  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.8.4.tgz#195f0fd659e33b7e71a7afd1df1fadea90ca1ced"
-  integrity sha512-tOsrBFHNAXwAaEeCr9ZENOOW4knJWGF/gLLpZlU8OFZ+AGOM2QXjt9gLFYdfzWEHuWN97/M5n0MicXBCDVZCCQ==
-  dependencies:
-    chalk "^4.1.0"
-    dayjs "^1.8.28"
-    debug "^4.1.1"
-    envinfo "^7.5.1"
-    find-up "^4.1.0"
-    fs-extra "^9.0.1"
-    fuzzy "^0.1.3"
-    get-stdin "^8.0.0"
-    glob "^7.1.6"
-    inquirer "^7.1.0"
-    json-colorizer "^2.2.2"
-    json-stringify-pretty-compact "^2.0.0"
-    lodash "^4.17.15"
-    node-cache "^5.1.1"
-    node-object-hash "^2.0.0"
-    shelljs "^0.8.4"
-    table "^5.4.6"
-    update-notifier "^4.1.0"
-    yaml "^1.10.0"
-    yargs "^15.3.1"
-
 "@semo/core@^0.8.6":
   version "0.8.6"
   resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.8.6.tgz#d7f29fe0d7e683e616628f85061e0bf0d08c4225"
@@ -161,10 +135,10 @@
     minimist "^1.2.0"
     request "^2.88.0"
 
-"@vipzhichengfork/pretty-markdown-pdf@^1.0.2":
-  version "1.0.2"
-  resolved "https://registry.yarnpkg.com/@vipzhichengfork/pretty-markdown-pdf/-/pretty-markdown-pdf-1.0.2.tgz#974f608fd059073f4c85b05b6d9d6e89599db793"
-  integrity sha512-+2GmBDpXoIAETCq4dmx4t74RRiyHiClmt3BiMqaUy4BYxv/gmKoYq0WpGh9yaiBE5BH8f+jFu9ijx6hxi2kgUQ==
+"@vipzhichengfork/pretty-markdown-pdf@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@vipzhichengfork/pretty-markdown-pdf/-/pretty-markdown-pdf-1.0.3.tgz#e1dcefa1477aad612e2745120f1c8cfacf8a0e91"
+  integrity sha512-S7B75Zbxca5vg4UVsl995R3yhLTehD+c2DZyN3/T+KzYdCsWJg2jvif+lwi8aKSgrtc3NLuOf90NfeXLvrQHUg==
   dependencies:
     cheerio "^1.0.0-rc.3"
     emoji-images "^0.1.1"
@@ -2435,12 +2409,12 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-semo-plugin-read@^0.5.6:
-  version "0.5.6"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-0.5.6.tgz#bdc4649274ca6702192234008fa448afbc0a84fc"
-  integrity sha512-pHVYkxoX2RA5vPHof64+XANHaPEl27aLar1osHzzLf52zXmmRfh5JifJGMjzEv0Fhz7NqT8Fepyc/1UmtmVnMA==
+semo-plugin-read@^0.5.8:
+  version "0.5.8"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-0.5.8.tgz#c88c1f46a98bbf0b043d9cba5e49ff17149bf9a3"
+  integrity sha512-TwNGcmE3AXLpETsMe6bSgjUB/w1ACujD2cta/cTZzhlHoYzyd0IsHItY/x4RpKgarlhQx7CHBozeBjBglNkY6A==
   dependencies:
-    "@semo/core" "^0.8.3"
+    "@semo/core" "^0.8.6"
     "@vipzhichengfork/node-readability" "^1.0.5"
     cheerio "^1.0.0-rc.3"
     get-port "^5.1.1"

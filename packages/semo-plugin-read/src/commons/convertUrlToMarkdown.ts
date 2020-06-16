@@ -55,10 +55,10 @@ const convertUrlToMarkdown = async (argv) => {
     throw new Error('Parse failed, not a supported url!')
   }
   let content = article.content
+  if (argv.toc) {
+    content = `[TOC]\n\n${content}`
+  }
   if (argv.title) {
-    if (argv.toc) {
-      content = `[TOC]\n\n${content}`
-    }
     content = `<h1>${article.title}</h1>\n\n${content}`
   }
 

@@ -11,8 +11,7 @@ export = async ({ format, title, markdown, argv, converted }) => {
     mkdirp.sync(path.dirname(mdName))
     fs.writeFileSync(mdName, markdown)
 
-    console.log(`ebook-convert "${mdName.replace(/(\s+)/g, '\\$1')}" "${argv.dir}/${title.replace(/(\s+)/g, '\\$1')}.mobi" --title "${title.replace(/(\s+)/g, '\\$1')}" --authors ${argv.domain}`)
-    Utils.shell.exec(`ebook-convert ${mdName.replace(/(\s+)/g, '\\$1')} "${argv.dir}/${title.replace(/(\s+)/g, '\\$1')}.mobi" --title "${title.replace(/(\s+)/g, '\\$1')}" --authors ${argv.domain}`)
+    Utils.shell.exec(`ebook-convert ${mdName.replace(/(\s+)/g, '\\$1')} "${argv.dir}/${title.replace(/(\s+)/g, '\\$1')}.mobi" --title "${title}" --authors ${argv.domain}`)
 
     fs.unlinkSync(mdName)
     Utils.success(`Saved to ${Utils.chalk.yellow(argv.dir + '/' + title + '.mobi')} successfully.`)
