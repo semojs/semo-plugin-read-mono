@@ -1,5 +1,3 @@
-import fs from 'fs'
-import path from 'path'
 import util from 'util'
 import read from '@vipzhichengfork/node-readability'
 import TurndownService from 'turndown'
