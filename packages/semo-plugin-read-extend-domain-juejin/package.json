@@ -1,5 +1,5 @@
 {
-  "name": "semo-plugin-read-extend-domain-jianshu",
+  "name": "semo-plugin-read-extend-domain-juejin",
   "version": "0.0.0",
   "description": "A plugin of semo-plugin-read, provide pre/post process handler for domain juejin.im.",
   "keywords": [
