@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-wechat",
-  "version": "0.5.6",
+  "version": "0.5.8",
   "description": "A plugin of semo-plugin-read, provide wechat format",
   "keywords": [
     "cli",
@@ -48,7 +48,7 @@
     "koa-static": "^5.0.0",
     "koa-views": "^6.3.0",
     "nunjucks": "^3.2.1",
-    "semo-plugin-read": "^0.5.6",
+    "semo-plugin-read": "^0.5.8",
     "semo-plugin-serve": "^0.0.13"
   },
   "browser": {
