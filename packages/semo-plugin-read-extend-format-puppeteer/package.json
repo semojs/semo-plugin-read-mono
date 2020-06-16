@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-puppeteer",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "description": "A plugin of semo-plugin-read, provide formats of pdf, html, jpeg, png.",
   "keywords": [
     "cli",
@@ -38,7 +38,7 @@
   "dependencies": {
     "@semo/core": "^0.8.6",
     "@vipzhichengfork/pretty-markdown-pdf": "^1.0.4",
-    "semo-plugin-read": "^0.6.0"
+    "semo-plugin-read": "^0.6.1"
   },
   "publishConfig": {
     "access": "public"
