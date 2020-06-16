@@ -125,10 +125,10 @@
     semver "^7.3.2"
     tsutils "^3.17.1"
 
-"@vipzhichengfork/node-readability@^1.0.3":
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/@vipzhichengfork/node-readability/-/node-readability-1.0.3.tgz#7e7410eef1b48e18baecff7800d3fb0124683820"
-  integrity sha512-tso/b75CHT1DFPbepuLUCVtjxuJPmvdTSynC/DThFTygbK2SwPrplH/TDxyOC2NBOuaKX3pWswGti75v8w39ig==
+"@vipzhichengfork/node-readability@^1.0.5":
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/@vipzhichengfork/node-readability/-/node-readability-1.0.5.tgz#c4050cac995a495dda841644d8f99e5a8549d978"
+  integrity sha512-PiUZO2zaCXs1tgUdRxPb8Z/GCTYdKAR4TmpPOZ5vOqnYT3G6wYObUs9VhUpfMbOGeNmBRFDhzVOFjPwjE5mtcQ==
   dependencies:
     encoding "~0.1.12"
     jsdom "^15.2.0"

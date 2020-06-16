@@ -29,6 +29,7 @@ const convertUrlToMarkdown = async (argv) => {
 
   // 获取 HTML
   const article = await promiseRead(argv.url, {
+    preserveUnlikelyCandidates: true,
     preprocess: function(source, response, contentType, callback) {
       // HTML 预处理
       source = globalPreprocess(source, argv)
