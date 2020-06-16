@@ -2,8 +2,15 @@ import React from "react";
 import Vditor from "vditor";
 import "vditor/src/assets/scss/index.scss"
 
+function htmlDecode(input){
+  let e = document.createElement('textarea')
+  e.innerHTML = input;
+  // handle case of empty input
+  return e.childNodes.length === 0 ? "" : e.childNodes[0].nodeValue;
+}
+
 // 编辑器默认的内容
-const defaultText = document.getElementById('markdown').innerHTML;
+const defaultText = htmlDecode(document.getElementById('markdown').innerHTML);
 
 class App extends React.Component {
   constructor (props) {
