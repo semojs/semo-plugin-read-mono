@@ -35,6 +35,7 @@
     "typescript": "^3.9.5"
   },
   "scripts": {
+    "semo": "SEMO_PLUGIN_DIR=.. semo",
     "watch": "tsc -w",
     "build": "tsc",
     "clean": "rimraf lib",
@@ -42,14 +43,8 @@
     "assets:build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "axios": "^0.19.2",
-    "koa": "^2.12.1",
-    "koa-router": "^9.0.1",
-    "koa-static": "^5.0.0",
-    "koa-views": "^6.3.0",
-    "nunjucks": "^3.2.1",
     "semo-plugin-read": "^1.0.0",
-    "semo-plugin-serve": "^0.0.13"
+    "semo-plugin-serve": "^1.0.0"
   },
   "browser": {
     "fs": false,
