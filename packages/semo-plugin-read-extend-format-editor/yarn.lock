@@ -915,10 +915,10 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@semo/core@^0.8.6":
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.8.6.tgz#d7f29fe0d7e683e616628f85061e0bf0d08c4225"
-  integrity sha512-Rvfqp9fEzcijgfj7QFtFwnZyIVFfHg8JyvG92K4vMkeI/nWo8AePpawXwXGIjVtBxX1YJ9lHSJJ8Fchw05X+yw==
+"@semo/core@^0.9.8":
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.9.8.tgz#d908975e17643e3690b290aa7555d534a05aa46b"
+  integrity sha512-6smQUPFwaOBjIBC8s6XKxQMGZoPoGcDh4XTJPxQhQu500CgqfgxFP7jAUvGonyi1973HoZFS1jScbLiFCwKCcQ==
   dependencies:
     chalk "^4.1.0"
     dayjs "^1.8.28"
@@ -941,10 +941,10 @@
     yaml "^1.10.0"
     yargs "^15.3.1"
 
-"@semo/core@^0.9.8":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.9.8.tgz#d908975e17643e3690b290aa7555d534a05aa46b"
-  integrity sha512-6smQUPFwaOBjIBC8s6XKxQMGZoPoGcDh4XTJPxQhQu500CgqfgxFP7jAUvGonyi1973HoZFS1jScbLiFCwKCcQ==
+"@semo/core@^0.9.9":
+  version "0.9.9"
+  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.9.9.tgz#cc8a43f545d96070d587c2c31a6946d7644da3f8"
+  integrity sha512-V9rNQhVZ+5puS4W19irDwJStIfT5zi15GXs5Dgw5tGhT0/f+F2IxCTGAPJwfpi403NvoYS0KaJtkJDuooF+Enw==
   dependencies:
     chalk "^4.1.0"
     dayjs "^1.8.28"
@@ -8055,12 +8055,12 @@ selfsigned@^1.10.7:
   dependencies:
     node-forge "0.9.0"
 
-semo-plugin-read@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.3.tgz#7ea9a944cc875efa26fcb0bb53bdc3a248962c0d"
-  integrity sha512-jaj50fiLwL/PKCnmAgQoDNJIFr4f01irRW731+byycEzH2vFaVAMxV8mtfz9X5prhzFySQ/Af3FAhUfCPwRn8Q==
+semo-plugin-read@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.4.tgz#983a330fa030a5e010dec18df61799029500a116"
+  integrity sha512-7s4QB22I6crhuDnkBH8SWQAyUryVexLIQ4RAuNCFnErjYY9+cTb9Bimyr3b2BfQHlFsM+WN0sHgy6lX9Vl7zsQ==
   dependencies:
-    "@semo/core" "^0.8.6"
+    "@semo/core" "^0.9.8"
     "@vipzhichengfork/node-readability" "^1.0.5"
     clipboardy "^2.3.0"
     marked "^1.1.0"
@@ -8071,12 +8071,12 @@ semo-plugin-read@^1.0.3:
     turndown-plugin-gfm "^1.0.2"
     url-parse "^1.4.7"
 
-semo-plugin-serve@^1.2.1:
-  version "1.2.1"
-  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-1.2.1.tgz#1c1b78fd1b89e8e1cef7b5abeb9f3f31275a7c08"
-  integrity sha512-9EEsgy49d/UXMB9tBgUuGgeo5fVazDWxyixdH5O63fqMF0EDm9upsjW3mWPjfH5cBDHj6PKetQJfwpLwNztUGg==
+semo-plugin-serve@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-1.2.2.tgz#f32ba3494e61aeaae6f216c982c032c43564ef6f"
+  integrity sha512-MqSUdcM1kD0JZw7JEB4hd1xh0wVTQ/HcQTUMYaCc3ITIYnP3HNa0rr1kaDFbm1wvdNJISveUwhHIaT50a3wMSA==
   dependencies:
-    "@semo/core" "^0.9.8"
+    "@semo/core" "^0.9.9"
     axios "^0.19.2"
     boxen "^4.2.0"
     detect-port "^1.3.0"

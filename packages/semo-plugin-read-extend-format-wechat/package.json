@@ -44,7 +44,7 @@
   },
   "dependencies": {
     "semo-plugin-read": "^1.0.4",
-    "semo-plugin-serve": "^1.2.1"
+    "semo-plugin-serve": "^1.2.2"
   },
   "browser": {
     "fs": false,

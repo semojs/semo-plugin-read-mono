@@ -47,7 +47,7 @@
   "dependencies": {
     "@semo/core": "^0.9.8",
     "semo-plugin-read": "^1.0.4",
-    "semo-plugin-serve": "^1.2.1"
+    "semo-plugin-serve": "^1.2.2"
   },
   "publishConfig": {
     "access": "public"

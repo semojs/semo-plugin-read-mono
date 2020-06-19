@@ -8,6 +8,7 @@ import mkdirp from 'mkdirp'
 
 import { Utils } from '@semo/core'
 
+export const plugin = 'read'
 export const disabled = false // Set to true to disable this command temporarily
 export const command = 'read [url]'
 export const desc = 'Parse and read a url or a md file with your favorate format.'
