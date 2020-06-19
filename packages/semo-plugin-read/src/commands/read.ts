@@ -70,8 +70,6 @@ export const handler = async function (argv: any) {
     output = process.cwd()
   }
 
-  console.log(output)
-
   if (!fs.existsSync(output)) {
     mkdirp.sync(output)
   }

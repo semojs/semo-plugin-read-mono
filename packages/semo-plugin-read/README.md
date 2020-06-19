@@ -15,18 +15,20 @@ semo read [url]
 Parse and read a url or a md file with your favorate format.
 
 选项：
-  --format, -F             Output format, use --available-formats to see all supported formats, default: markdown.
+  --format, -F                  Output format, use --available-formats to see all supported formats, default: markdown.
                                                                                                     [默认值: "markdown"]
-  --clipboard, -C          Input from clipboard
-  --proxy, -P              Proxy images to prevent anti-hotlinking.
-  --port                   Web server port.                                                               [默认值: 3000]
-  --domain                 Set source input from which domain, without protocol and www.
-  --title                  Prepend title, use no-title to disable.
-  --footer                 Append footer, use no-footer to disable.                                       [默认值: true]
-  --toc                    Include TOC
-  --rename, -R             New name, with extension.
-  --output, -O             Location for output.
-  --available-formats, -A  List all supported formats
+  --clipboard                   Input from clipboard
+  --proxy, -P                   Proxy images to prevent anti-hotlinking.
+  --port                        Web server port.                                                          [默认值: 3000]
+  --domain                      Set source input from which domain, without protocol and www.
+  --open-browser, --open, -B    Auto open browser.
+  --clear-console, --clear, -C  Auto open browser.
+  --title                       Prepend title, use no-title to disable.
+  --footer                      Append footer, use no-footer to disable.                                  [默认值: true]
+  --toc                         Include TOC
+  --rename, -R                  New name, with extension.
+  --output, -O                  Location for output.
+  --available-formats, -A       List all supported formats
 ```
 
 ## Extend plugin
