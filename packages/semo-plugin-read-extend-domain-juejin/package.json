@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-domain-juejin",
-  "version": "1.0.0",
+  "version": "1.0.4",
   "description": "A plugin of semo-plugin-read, provide pre/post process handler for domain juejin.im.",
   "keywords": [
     "cli",
