@@ -16,12 +16,14 @@ export const desc = 'Parse and read a url or a md file with your favorate format
 
 export const builder = function (yargs: any) {
   yargs.option('format', { default: 'markdown', describe: 'Output format, use --available-formats to see all supported formats, default: markdown.', alias: 'F' })
-  yargs.option('clipboard', { describe: 'Input from clipboard', alias: 'C'})
+  yargs.option('clipboard', { describe: 'Input from clipboard'})
 
   // web format related
   yargs.option('proxy', { describe: 'Proxy images to prevent anti-hotlinking.', alias: 'P' })
   yargs.option('port', { default: 3000, describe: 'Web server port.' })
   yargs.option('domain', { describe: 'Set source input from which domain, without protocol and www.' })
+  yargs.option('open-browser', { describe: 'Auto open browser.', alias: ['open', 'B'] })
+  yargs.option('clear-console', { describe: 'Auto open browser.', alias: ['clear', 'C'] })
 
   yargs.option('title', { describe: 'Prepend title, use no-title to disable.' })
   yargs.option('footer', { default: true, describe: 'Append footer, use no-footer to disable.' })

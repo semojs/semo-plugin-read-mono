@@ -958,6 +958,32 @@
     yaml "^1.10.0"
     yargs "^15.3.1"
 
+"@semo/core@^0.9.8":
+  version "0.9.8"
+  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.9.8.tgz#d908975e17643e3690b290aa7555d534a05aa46b"
+  integrity sha512-6smQUPFwaOBjIBC8s6XKxQMGZoPoGcDh4XTJPxQhQu500CgqfgxFP7jAUvGonyi1973HoZFS1jScbLiFCwKCcQ==
+  dependencies:
+    chalk "^4.1.0"
+    dayjs "^1.8.28"
+    debug "^4.1.1"
+    envinfo "^7.5.1"
+    find-up "^4.1.0"
+    fs-extra "^9.0.1"
+    fuzzy "^0.1.3"
+    get-stdin "^8.0.0"
+    glob "^7.1.6"
+    inquirer "^7.1.0"
+    json-colorizer "^2.2.2"
+    json-stringify-pretty-compact "^2.0.0"
+    lodash "^4.17.15"
+    node-cache "^5.1.1"
+    node-object-hash "^2.0.0"
+    shelljs "^0.8.4"
+    table "^5.4.6"
+    update-notifier "^4.1.0"
+    yaml "^1.10.0"
+    yargs "^15.3.1"
+
 "@sindresorhus/is@^0.14.0":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@sindresorhus/is/-/is-0.14.0.tgz#9fb3a3cf3132328151f353de4632e01e52102bea"
@@ -1466,7 +1492,7 @@ ansi-align@^3.0.0:
   dependencies:
     string-width "^3.0.0"
 
-ansi-colors@^3.0.0:
+ansi-colors@^3.0.0, ansi-colors@^3.2.1:
   version "3.2.4"
   resolved "https://registry.yarnpkg.com/ansi-colors/-/ansi-colors-3.2.4.tgz#e3a3da4bfbae6c86a9c285625de124a234026fbf"
   integrity sha512-hHUXGagefjN2iRrID63xckIvotOXOojhQKWIPUZ4mNUZ9nLZW+7FMNoE1lOkEhNWYsx/7ysGIuJYCiMAA9FnrA==
@@ -3750,6 +3776,13 @@ enquire.js@^2.1.6:
   resolved "https://registry.yarnpkg.com/enquire.js/-/enquire.js-2.1.6.tgz#3e8780c9b8b835084c3f60e166dbc3c2a3c89814"
   integrity sha1-PoeAybi4NQhMP2DhZtvDwqPImBQ=
 
+enquirer@^2.3.5:
+  version "2.3.5"
+  resolved "https://registry.yarnpkg.com/enquirer/-/enquirer-2.3.5.tgz#3ab2b838df0a9d8ab9e7dff235b0e8712ef92381"
+  integrity sha512-BNT1C08P9XD0vNg3J475yIUG+mVdp9T6towYFHUv897X0KoHBjB1shyrNmhmtHWKP17iSWgo7Gqh7BBuzLZMSA==
+  dependencies:
+    ansi-colors "^3.2.1"
+
 entities@^1.1.1, entities@~1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/entities/-/entities-1.1.2.tgz#bdfa735299664dfafd34529ed4f8522a275fea56"
@@ -3927,10 +3960,10 @@ eslint-visitor-keys@^1.1.0, eslint-visitor-keys@^1.2.0:
   resolved "https://registry.yarnpkg.com/eslint-visitor-keys/-/eslint-visitor-keys-1.2.0.tgz#74415ac884874495f78ec2a97349525344c981fa"
   integrity sha512-WFb4ihckKil6hu3Dp798xdzSfddwKKU3+nGniKF6HfeW6OLd2OUDEPP7TcHtB5+QXOKg2s6B2DaMPE1Nn/kxKQ==
 
-eslint@^7.2.0:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.2.0.tgz#d41b2e47804b30dbabb093a967fb283d560082e6"
-  integrity sha512-B3BtEyaDKC5MlfDa2Ha8/D6DsS4fju95zs0hjS3HdGazw+LNayai38A25qMppK37wWGWNYSPOR6oYzlz5MHsRQ==
+eslint@^7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/eslint/-/eslint-7.3.0.tgz#f9f1fc3dc1227985d0db88769f2bbac7b4b875d7"
+  integrity sha512-dJMVXwfU5PT1cj2Nv2VPPrKahKTGdX+5Dh0Q3YuKt+Y2UhdL2YbzsVaBMyG9HC0tBismlv/r1+eZqs6SMIV38Q==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     ajv "^6.10.0"
@@ -3938,6 +3971,7 @@ eslint@^7.2.0:
     cross-spawn "^7.0.2"
     debug "^4.0.1"
     doctrine "^3.0.0"
+    enquirer "^2.3.5"
     eslint-scope "^5.1.0"
     eslint-utils "^2.0.0"
     eslint-visitor-keys "^1.2.0"
@@ -3951,7 +3985,6 @@ eslint@^7.2.0:
     ignore "^4.0.6"
     import-fresh "^3.0.0"
     imurmurhash "^0.1.4"
-    inquirer "^7.0.0"
     is-glob "^4.0.0"
     js-yaml "^3.13.1"
     json-stable-stringify-without-jsonify "^1.0.1"
@@ -4556,11 +4589,6 @@ get-paths@0.0.7:
   integrity sha512-0wdJt7C1XKQxuCgouqd+ZvLJ56FQixKoki9MrFaO4EriqzXOiH9gbukaDE1ou08S8Ns3/yDzoBAISNPqj6e6tA==
   dependencies:
     pify "^4.0.1"
-
-get-port@^5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/get-port/-/get-port-5.1.1.tgz#0469ed07563479de6efb986baf053dcd7d4e3193"
-  integrity sha512-g/Q1aTSDOxFpchXC4i8ZWvxA1lnPqx/JHqcpIw0/LX9T8x/GBbi6YnlN5nhaKIFkT8oFsscUKgDJYxfwfS6QsQ==
 
 get-ready@^1.0.0, get-ready@~1.0.0:
   version "1.0.0"
@@ -5350,7 +5378,7 @@ ini@^1.3.4, ini@^1.3.5, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-inquirer@^7.0.0, inquirer@^7.1.0:
+inquirer@^7.1.0:
   version "7.1.0"
   resolved "https://registry.yarnpkg.com/inquirer/-/inquirer-7.1.0.tgz#1298a01859883e17c7264b82870ae1034f92dd29"
   integrity sha512-5fJMWEmikSYu0nv/flMc475MhGbB7TSPd/2IpFV4I4rMklboCH2rQjYY5kKiYGHqUF9gvaambupcJFFG9dvReg==
@@ -7419,6 +7447,14 @@ only@~0.0.2:
   version "0.0.2"
   resolved "https://registry.yarnpkg.com/only/-/only-0.0.2.tgz#2afde84d03e50b9a8edc444e30610a70295edfb4"
   integrity sha1-Kv3oTQPlC5qO3EROMGEKcCle37Q=
+
+open@^7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/open/-/open-7.0.4.tgz#c28a9d315e5c98340bf979fdcb2e58664aa10d83"
+  integrity sha512-brSA+/yq+b08Hsr4c8fsEW2CRzk1BmfN3SAK/5VCHQ9bdoZJ4qa/+AfR0xHjlbbZUyPkUHs1b8x1RqdyZdkVqQ==
+  dependencies:
+    is-docker "^2.0.0"
+    is-wsl "^2.1.1"
 
 opn@^5.5.0:
   version "5.5.0"
@@ -9524,15 +9560,14 @@ selfsigned@^1.10.7:
   dependencies:
     node-forge "0.9.0"
 
-semo-plugin-read@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.0.tgz#5a38ddcdba9f880ee7daa5c20cae67de7cc08e50"
-  integrity sha512-EitTTk0kl86O84j5he/Oh/aWlydJ5GowpupAlDU3oi4/VwAX/w0M71WHbPBWW/+BjbI8NN1jOq/bfO9Wdbta9w==
+semo-plugin-read@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.3.tgz#7ea9a944cc875efa26fcb0bb53bdc3a248962c0d"
+  integrity sha512-jaj50fiLwL/PKCnmAgQoDNJIFr4f01irRW731+byycEzH2vFaVAMxV8mtfz9X5prhzFySQ/Af3FAhUfCPwRn8Q==
   dependencies:
     "@semo/core" "^0.8.6"
     "@vipzhichengfork/node-readability" "^1.0.5"
     clipboardy "^2.3.0"
-    get-port "^5.1.1"
     marked "^1.1.0"
     marked-terminal "^4.1.0"
     mkdirp "^1.0.4"
@@ -9541,12 +9576,12 @@ semo-plugin-read@^1.0.0:
     turndown-plugin-gfm "^1.0.2"
     url-parse "^1.4.7"
 
-semo-plugin-serve@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-1.0.0.tgz#428a5bea3b1cb08c30ca1c8b77f3cc40c2432b7a"
-  integrity sha512-EYBqVtvbOWZJ+kTH4g0D5n9IImU8x9U2B46ZunliFAuttOHCVewi2f/Jx/3P1ydBDvb87N+AaKUMN1xsstZ7OQ==
+semo-plugin-serve@^1.2.1:
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-1.2.1.tgz#1c1b78fd1b89e8e1cef7b5abeb9f3f31275a7c08"
+  integrity sha512-9EEsgy49d/UXMB9tBgUuGgeo5fVazDWxyixdH5O63fqMF0EDm9upsjW3mWPjfH5cBDHj6PKetQJfwpLwNztUGg==
   dependencies:
-    "@semo/core" "^0.8.6"
+    "@semo/core" "^0.9.8"
     axios "^0.19.2"
     boxen "^4.2.0"
     detect-port "^1.3.0"
@@ -9563,6 +9598,7 @@ semo-plugin-serve@^1.0.0:
     koa-views "^6.3.0"
     mockjs "^1.1.0"
     nunjucks "^3.2.1"
+    open "^7.0.4"
     require-directory "^2.1.1"
 
 semver-diff@^3.1.1:

@@ -13,6 +13,8 @@ export = async ({ title, markdown, converted, argv }) => {
     publicDir: path.resolve(__dirname, '../../assets'),
     viewsDir: path.resolve(__dirname, '../../views'),
     viewsData: { title, markdown },
-    disableGlobalExcpetionRouter: true
+    disableGlobalExcpetionRouter: true,
+    openBrowser: argv.openBrowser,
+    clearConsole: argv.clearConsole
   })
 }
