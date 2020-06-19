@@ -6,8 +6,6 @@ import chalk from 'chalk'
 import _ from 'lodash'
 import mkdirp from 'mkdirp'
 
-import { Utils } from '@semo/core'
-
 export const plugin = 'read'
 export const disabled = false // Set to true to disable this command temporarily
 export const command = 'read [url]'
@@ -37,6 +35,8 @@ export const builder = function (yargs: any) {
 }
 
 export const handler = async function (argv: any) {
+  const { Utils } = argv.$semo
+
   // set semo core cache
   const cache = Utils.getInternalCache()
   cache.set('argv', argv) // set argv first time
@@ -59,7 +59,7 @@ export const handler = async function (argv: any) {
     process.exit(0)
   }
 
-  let output = Utils._.get(argv, 'semo-plugin-read.output', argv.output)
+  let output = Utils.config('output', argv.output)
   if (output) {
     if (output[0] === '~') {
       output = output.replace(/^~/, process.env.HOME)
@@ -69,6 +69,8 @@ export const handler = async function (argv: any) {
   } else {
     output = process.cwd()
   }
+
+  console.log(output)
 
   if (!fs.existsSync(output)) {
     mkdirp.sync(output)

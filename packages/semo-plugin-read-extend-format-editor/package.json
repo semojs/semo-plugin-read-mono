@@ -45,9 +45,9 @@
     "assets:build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "@semo/core": "^0.9.8",
+    "@semo/core": "^0.9.10",
     "semo-plugin-read": "^1.0.5",
-    "semo-plugin-serve": "^1.2.2"
+    "semo-plugin-serve": "^1.2.3"
   },
   "publishConfig": {
     "access": "public"

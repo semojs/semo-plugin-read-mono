@@ -18,10 +18,10 @@
     esutils "^2.0.2"
     js-tokens "^4.0.0"
 
-"@semo/core@^0.8.6":
-  version "0.8.6"
-  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.8.6.tgz#d7f29fe0d7e683e616628f85061e0bf0d08c4225"
-  integrity sha512-Rvfqp9fEzcijgfj7QFtFwnZyIVFfHg8JyvG92K4vMkeI/nWo8AePpawXwXGIjVtBxX1YJ9lHSJJ8Fchw05X+yw==
+"@semo/core@^0.9.10":
+  version "0.9.10"
+  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.9.10.tgz#f152a18194d83ccf4f1b6085a1171b03743c4899"
+  integrity sha512-b1MXyj2RMJo3m6JRH/DIylsC+oYIddgaslkpkN3+FszSrCuzDQBHXjeOAL/OXT0YknPGA6XwZLcmIfW6PpW57A==
   dependencies:
     chalk "^4.1.0"
     dayjs "^1.8.28"
@@ -2519,12 +2519,12 @@ saxes@^5.0.0:
   dependencies:
     xmlchars "^2.2.0"
 
-semo-plugin-read@^1.0.3:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.3.tgz#7ea9a944cc875efa26fcb0bb53bdc3a248962c0d"
-  integrity sha512-jaj50fiLwL/PKCnmAgQoDNJIFr4f01irRW731+byycEzH2vFaVAMxV8mtfz9X5prhzFySQ/Af3FAhUfCPwRn8Q==
+semo-plugin-read@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.5.tgz#52478023574c3b2e808064b9caacc06056783385"
+  integrity sha512-ZcfWbPXLqr2tU+FLnKG3Uen4+5+QN1vOHKMYI9GzWGJh3LPzEV3lOA+Irf0br4esRnmwGNke8xpm/ljU8rENtg==
   dependencies:
-    "@semo/core" "^0.8.6"
+    "@semo/core" "^0.9.8"
     "@vipzhichengfork/node-readability" "^1.0.5"
     clipboardy "^2.3.0"
     marked "^1.1.0"
