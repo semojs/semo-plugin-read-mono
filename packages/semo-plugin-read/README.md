@@ -20,8 +20,6 @@ Parse and read a url or a md file with your favorate format.
   --clipboard, -C          Input from clipboard
   --proxy, -P              Proxy images to prevent anti-hotlinking.
   --port                   Web server port.                                                               [默认值: 3000]
-  --localhost              Localhost host with port, auto set and you can change.
-  --nethost                WLAN host with port, auto set and you can change.
   --domain                 Set source input from which domain, without protocol and www.
   --title                  Prepend title, use no-title to disable.
   --footer                 Append footer, use no-footer to disable.                                       [默认值: true]

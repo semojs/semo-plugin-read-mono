@@ -3,8 +3,6 @@ import path from 'path'
 import convertUrlToMarkdown from '../commons/convertUrlToMarkdown'
 import convertMarkdownToFile from '../commons/convertMarkdownToFile'
 import chalk from 'chalk'
-import os from 'os'
-import getPort from 'get-port'
 import _ from 'lodash'
 import mkdirp from 'mkdirp'
 
@@ -23,8 +21,6 @@ export const builder = function (yargs: any) {
   // web format related
   yargs.option('proxy', { describe: 'Proxy images to prevent anti-hotlinking.', alias: 'P' })
   yargs.option('port', { default: 3000, describe: 'Web server port.' })
-  yargs.option('localhost', { describe: 'Localhost host with port, auto set and you can change.' })
-  yargs.option('nethost', { describe: 'WLAN host with port, auto set and you can change.' })
   yargs.option('domain', { describe: 'Set source input from which domain, without protocol and www.' })
 
   yargs.option('title', { describe: 'Prepend title, use no-title to disable.' })
@@ -78,14 +74,8 @@ export const handler = async function (argv: any) {
   argv.output = output
 
   // Even the format is not web or mobi, other plugins may need these values
-  let port = await getPort()
-  argv.port = argv.port || port
+  argv.port = argv.port || 3000
   
-  // HOST地址检测
-  argv.localhost = `http://localhost:${argv.port}`
-  const interfaceFounded = _.chain(os.networkInterfaces()).flatMap().find(o => o.family === 'IPv4' && o.internal === false).value()
-  argv.nethost = interfaceFounded ? `http://${interfaceFounded.address}:${argv.port}` : null
-
   let format = argv.format
   let title
   let markdown
