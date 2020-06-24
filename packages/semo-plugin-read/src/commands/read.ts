@@ -59,7 +59,7 @@ export const handler = async function (argv: any) {
     process.exit(0)
   }
 
-  let output = Utils.config('output', argv.output)
+  let output = Utils.pluginConfig('output')
   if (output) {
     if (output[0] === '~') {
       output = output.replace(/^~/, process.env.HOME)
