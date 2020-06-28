@@ -36,7 +36,7 @@
     "prepare": "npm run clean && npm run build"
   },
   "dependencies": {
-    "@semo/core": "^0.10.9",
+    "@semo/core": "^0.10.14",
     "@vipzhichengfork/node-readability": "^1.0.5",
     "clipboardy": "^2.3.0",
     "marked": "^1.1.0",

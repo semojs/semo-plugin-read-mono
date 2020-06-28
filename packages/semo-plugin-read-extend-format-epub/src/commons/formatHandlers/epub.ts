@@ -5,6 +5,11 @@ import path from 'path'
 
 export = async ({ format, title, markdown, argv, converted }) => {
   if (Utils.shell.which('pandoc')) {
+    if (!title || !markdown) {
+      Utils.error('No content')
+      return
+    }
+    
     // markdown is temp file in this process
     const mdName = `/tmp/semo-plugin-read/${title}.md`
 
