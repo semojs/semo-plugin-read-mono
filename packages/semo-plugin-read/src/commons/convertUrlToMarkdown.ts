@@ -48,7 +48,7 @@ const convertUrlToMarkdown = async (argv) => {
           if (extendDomains[argv.domain] && extendDomains[argv.domain].preprocess && Utils._.isFunction(extendDomains[argv.domain].preprocess)) {
             const newSource = extendDomains[argv.domain].preprocess(source, argv)
             if (newSource && Utils._.isString(newSource)) {
-              markdown = newSource
+              source = newSource
             }
           }
         }

@@ -14,18 +14,18 @@ export const desc = 'Parse and read a url or a md file with your favorate format
 // export const middleware = (argv) => {}
 
 export const builder = function (yargs: any) {
-  yargs.option('format', { default: 'markdown', describe: 'Output format, use --available-formats to see all supported formats, default: markdown.', alias: 'F' })
+  yargs.option('format', { describe: 'Output format, use --available-formats to see all supported formats, default is markdown.', alias: 'F' })
   yargs.option('clipboard', { describe: 'Input from clipboard'})
 
   // web format related
   yargs.option('proxy', { describe: 'Proxy images to prevent anti-hotlinking.', alias: 'P' })
-  yargs.option('port', { default: 3000, describe: 'Web server port.' })
+  yargs.option('port', { describe: 'Web server port. default is 3000' })
   yargs.option('domain', { describe: 'Set source input from which domain, without protocol and www.' })
   yargs.option('open-browser', { describe: 'Auto open browser.', alias: ['open', 'B'] })
   yargs.option('clear-console', { describe: 'Auto open browser.', alias: ['clear', 'C'] })
 
   yargs.option('title', { describe: 'Prepend title, use no-title to disable.' })
-  yargs.option('footer', { default: true, describe: 'Append footer, use no-footer to disable.' })
+  yargs.option('footer', { describe: 'Append footer, use no-footer to disable. default is true' })
   yargs.option('toc', { describe: 'Include TOC' })
 
   yargs.option('rename', { describe: 'New name, with extension.', alias: 'R' })
@@ -36,6 +36,20 @@ export const builder = function (yargs: any) {
 
 export const handler = async function (argv: any) {
   const { Utils } = argv.$semo
+
+  argv.format = Utils.pluginConfig('format', 'markdown')
+  argv.clipboard = Utils.pluginConfig('clipboard')
+  argv.proxy = Utils.pluginConfig('proxy')
+  argv.port = Utils.pluginConfig('port', 3000)
+  argv.domain = Utils.pluginConfig('domain')
+  argv.openBrowser = Utils.pluginConfig('openBrowser')
+  argv.clearConsole = Utils.pluginConfig('clearConsole')
+  argv.title = Utils.pluginConfig('title')
+  argv.footer = Utils.pluginConfig('footer', true)
+  argv.toc = Utils.pluginConfig('toc')
+  argv.rename = Utils.pluginConfig('rename')
+  argv.output = Utils.pluginConfig('output')
+  argv.availableFormats = Utils.pluginConfig('availableFormats')
 
   // set semo core cache
   const cache = Utils.getInternalCache()
@@ -59,7 +73,7 @@ export const handler = async function (argv: any) {
     process.exit(0)
   }
 
-  let output = Utils.pluginConfig('output')
+  let output = argv.output
   if (output) {
     if (output[0] === '~') {
       output = output.replace(/^~/, process.env.HOME)
