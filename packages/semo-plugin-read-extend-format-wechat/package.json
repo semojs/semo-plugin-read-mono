@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-wechat",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "A plugin of semo-plugin-read, provide wechat format",
   "keywords": [
     "cli",
@@ -43,7 +43,7 @@
     "assets:build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "semo-plugin-read": "^1.0.8",
+    "semo-plugin-read": "^1.0.9",
     "semo-plugin-serve": "^1.2.3"
   },
   "browser": {
