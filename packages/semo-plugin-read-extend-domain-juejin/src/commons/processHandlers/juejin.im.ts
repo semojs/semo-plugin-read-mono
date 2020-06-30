@@ -6,14 +6,15 @@ export const preprocess = (html, argv) => {
   const $ = cheerio.load(html)
   const title = $('title').html()
   let content = $('.article-content').html()
+  
+  // 去掉网页复制代码功能带来的干扰
+  content = content.replace(/<span class="copy-code-btn">(.*)<\/span>/g, '')
   html = `<title>${title}</title>${content}`
 
   return html
 }
 
 export const postprocess = (markdown, argv) => {
-  // 去掉网页复制代码功能带来的干扰
-  markdown = markdown.replace(/\s+复制代码/g, '')
 
   // 过滤掉锚点里的外链
   markdown = markdown.replace(/\[(.*?)\]\((.*?)#(.*?)\)/g, (match, p1, p2, p3) => {
