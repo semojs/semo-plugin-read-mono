@@ -38,7 +38,7 @@ There are 2 kinds of extensions, one is for defining formats, another one is for
 **Define formats**
 
 ```js 
-hook_read_define_format: async ({ format, title, markdown, argv, converted }) => {}
+hook_define_format: new Utils.Hook('semo-plugin-read', async ({ format, title, markdown, argv, converted }) => {})
 ```
 
 Arguments:
@@ -52,10 +52,10 @@ Arguments:
 ** Domain's processing **
 
 ```js
-hook_read_domain: {
+hook_domain: new Utils.Hook('semo-plugin-read', {
   preprocess: (html, argv) => html,
   postprocess: (markdown, argv) => markdown
-}
+})
 ```
 
 * html: original html

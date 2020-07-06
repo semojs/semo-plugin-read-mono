@@ -56,7 +56,7 @@ export const handler = async function (argv: any) {
   cache.set('argv', argv) // set argv first time
   
   if (argv.availableFormats) {
-    const formats = await Utils.invokeHook('read_define_format')
+    const formats = await Utils.invokeHook('read:define_format')
     const headers = ['格式', '说明', '别名']
     const rows = [headers]
     Object.keys(formats).forEach(key => {
