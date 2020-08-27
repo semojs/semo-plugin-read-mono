@@ -25,7 +25,8 @@
     "watch:domain": "stmux -M -e Error -- [ -t juejin 'yarn watch:domain:juejin' .. -t jianshu 'yarn watch:domain:jianshu' .. -t mp 'yarn watch:domain:mp' .. -t zhihu 'yarn watch:domain:zhihu' ]"
   },
   "devDependencies": {
-    "lerna": "^3.22.1"
+    "lerna": "^3.22.1",
+    "stmux": "^1.8.0"
   },
   "dependencies": {}
 }

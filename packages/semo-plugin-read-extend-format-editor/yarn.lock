@@ -948,32 +948,6 @@
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.3.tgz#2b5a3ab3f918cca48a8c754c08168e3f03eba61b"
   integrity sha512-shAmDyaQC4H92APFoIaVDHCx5bStIocgvbwQyxPRrbUY20V1EYTbSDchWbuwlMG3V17cprZhA6+78JfB+3DTPw==
 
-"@semo/core@^0.10.14", "@semo/core@^0.10.9":
-  version "0.10.14"
-  resolved "https://registry.yarnpkg.com/@semo/core/-/core-0.10.14.tgz#8e1536559f082af88080d9a2f5aeeeaf6cf29632"
-  integrity sha512-ZfKo9RdTgygpcEo5FjU51uKLDukwGh0N4sTljqaG0bRFU+Y1rWETAqoKtyTNaT9yeJBolbQJ481lXMnW6atw0w==
-  dependencies:
-    chalk "^4.1.0"
-    dayjs "^1.8.28"
-    debug "^4.1.1"
-    envinfo "^7.5.1"
-    find-up "^4.1.0"
-    fs-extra "^9.0.1"
-    fuzzy "^0.1.3"
-    get-stdin "^8.0.0"
-    glob "^7.1.6"
-    inquirer "^7.1.0"
-    json-colorizer "^2.2.2"
-    json-stringify-pretty-compact "^2.0.0"
-    lodash "^4.17.15"
-    node-cache "^5.1.1"
-    node-object-hash "^2.0.0"
-    shelljs "^0.8.4"
-    table "^5.4.6"
-    update-notifier "^4.1.0"
-    yaml "^1.10.0"
-    yargs "^15.3.1"
-
 "@semo/core@^1.0.3":
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/@semo/core/-/core-1.0.3.tgz#026321acf642e62d5dd20b3c1187401d5cf455cb"
@@ -5580,10 +5554,10 @@ koa-compose@^4.1.0:
   resolved "https://registry.yarnpkg.com/koa-compose/-/koa-compose-4.1.0.tgz#507306b9371901db41121c812e923d0d67d3e877"
   integrity sha512-8ODW8TrDuMYvXRwra/Kh7/rJo9BtOfPc6qO8eAfC80CnCvSjSl0bkRM24X6/XBBEyj0v1nRUQ1LyOy3dbqOWXw==
 
-koa-compress@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/koa-compress/-/koa-compress-4.0.1.tgz#7a7ed52ce7c3e0cbe918e99e1eaaeba87ec11d48"
-  integrity sha512-It4WYfsBb9HegnFgcBhiRbPeh1LDjXhRM4+xi2jMp8ujwaVAdqhFzHpbDWuTxbLxuBwStn+Bwdwn2zDZxeNChg==
+koa-compress@^5.0.0:
+  version "5.0.1"
+  resolved "https://registry.yarnpkg.com/koa-compress/-/koa-compress-5.0.1.tgz#9e89e2847998f8f9f73a5674e5739a2f4b6531fc"
+  integrity sha512-uTo7Hcyyt6e9o2X3htRS/SNEKy9vDOUc/r1qs/F0YI2Frv9IEbkjz/9dC6IdJWBQAG34lRuU7jBXeq3DRur9Ng==
   dependencies:
     bytes "^3.0.0"
     compressible "^2.0.0"
@@ -5614,10 +5588,10 @@ koa-logger@^3.2.1:
     humanize-number "0.0.2"
     passthrough-counter "^1.0.0"
 
-koa-router@^9.0.1:
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/koa-router/-/koa-router-9.0.1.tgz#34fb0b849624ff8ae96823e2c5d8c672f91ac19b"
-  integrity sha512-KXCXDID3cMpfGb5QjCOUfkodWKQYIEYFK0aGSpeAZKZt2ebdV4TLq3cgtmnxvoaAQoPkSzev2kSLFOdPbpLdqg==
+koa-router@^9.1.0:
+  version "9.4.0"
+  resolved "https://registry.yarnpkg.com/koa-router/-/koa-router-9.4.0.tgz#7bd3cd4f6247256e4b56fbb2203bde3851acc15a"
+  integrity sha512-RO/Y8XqSNM2J5vQeDaBI/7iRpL50C9QEudY4d3T4D1A2VMKLH0swmfjxDFPiIpVDLuNN6mVD9zBI1eFTHB6QaA==
   dependencies:
     debug "^4.1.1"
     http-errors "^1.7.3"
@@ -8114,12 +8088,12 @@ selfsigned@^1.10.7:
   dependencies:
     node-forge "0.9.0"
 
-semo-plugin-read@^1.0.11:
-  version "1.0.11"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.11.tgz#c8bd8ad5e8a41d1664ce08e3d59660d6ee7b2a5b"
-  integrity sha512-yQA/mwEyX74mevl7MZgX9CsQP/yfCfrv3Q6ASidIv792GP3qcwTNgGuVBaIWccojNxRTT2Mt9/9DUhOzEYUNQg==
+semo-plugin-read@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.13.tgz#004ece6d21318bfb6539982ddced334325a9abf2"
+  integrity sha512-MWi1wmmgeCTTVf3eaX9RzV76pYEFHxn1RExYRm9o85ozbpBaVAsRpm3P8ozHXQX2yMwmfI7buVaUzqASsU4Y0w==
   dependencies:
-    "@semo/core" "^0.10.14"
+    "@semo/core" "^1.0.3"
     "@vipzhichengfork/node-readability" "^1.0.5"
     clipboardy "^2.3.0"
     marked "^1.1.0"
@@ -8130,12 +8104,12 @@ semo-plugin-read@^1.0.11:
     turndown-plugin-gfm "^1.0.2"
     url-parse "^1.4.7"
 
-semo-plugin-serve@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-1.2.5.tgz#1a7678de533c82e197f4879952eaa0c66374722f"
-  integrity sha512-ILDGk+AID00mUEh7DcZxvB7eAY/9W/oBqdIzIbgm8rpGSK3wEo++wZS9jmP5eu9coUpke4vevtuPdrEdiVlN+g==
+semo-plugin-serve@^1.2.6:
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/semo-plugin-serve/-/semo-plugin-serve-1.2.6.tgz#72dfd88450792f0ae2a4b1c8a54ab06c806049f0"
+  integrity sha512-o479yZZIfCR6E6P0n3/SNV1NtCWf4/z2G8WOBPsY0VgsuyIQfPf+lWlEQg+3WxcRBEEwIfrPgbGIpvi4pjzmKg==
   dependencies:
-    "@semo/core" "^0.10.9"
+    "@semo/core" "^1.0.3"
     axios "^0.19.2"
     boxen "^4.2.0"
     detect-port "^1.3.0"
@@ -8144,9 +8118,9 @@ semo-plugin-serve@^1.2.5:
     kcors "^2.2.2"
     koa "^2.13.0"
     koa-bodyparser "^4.3.0"
-    koa-compress "^4.0.1"
+    koa-compress "^5.0.0"
     koa-logger "^3.2.1"
-    koa-router "^9.0.1"
+    koa-router "^9.1.0"
     koa-send "^5.0.0"
     koa-serve-index "^1.1.1"
     koa-views "^6.3.0"
