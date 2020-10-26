@@ -17,24 +17,24 @@
   "types": "lib/index.d.ts",
   "license": "MIT",
   "devDependencies": {
-    "@babel/preset-react": "^7.10.4",
-    "@types/node": "^14.0.14",
-    "@typescript-eslint/eslint-plugin": "^3.5.0",
-    "@typescript-eslint/parser": "^3.5.0",
+    "@babel/preset-react": "^7.12.1",
+    "@types/node": "^14.14.3",
+    "@typescript-eslint/eslint-plugin": "^4.5.0",
+    "@typescript-eslint/parser": "^4.5.0",
     "cross-env": "^7.0.2",
-    "eslint": "^7.4.0",
-    "eslint-config-standard": "^14.1.1",
+    "eslint": "^7.12.0",
+    "eslint-config-standard": "^15.0.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.1",
-    "laravel-mix": "^5.0.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "eslint-plugin-standard": "^4.0.2",
+    "laravel-mix": "^5.0.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.9",
-    "sass-loader": "^9.0.1",
-    "typescript": "^3.9.6",
-    "vditor": "^3.3.3"
+    "sass": "^1.27.0",
+    "sass-loader": "^10.0.4",
+    "typescript": "^4.0.3",
+    "vditor": "^3.5.5"
   },
   "scripts": {
     "watch": "tsc -w",
@@ -45,7 +45,7 @@
     "assets:build": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
   "dependencies": {
-    "@semo/core": "^1.0.3",
+    "@semo/core": "^1.5.1",
     "semo-plugin-read": "^1.0.15",
     "semo-plugin-serve": "^1.2.6"
   },

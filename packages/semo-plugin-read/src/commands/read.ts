@@ -121,7 +121,10 @@ export const handler = async function (argv: any) {
       format = path.extname(argv.rename) ? path.extname(argv.rename).substring(1) : format
     }
     await convertMarkdownToFile({ format, title, markdown, argv, converted })
+
+    return false // 禁止退出
   } catch (e) {
     console.log(chalk.red('Error: ' + e.stack))
+    return true
   }
 }
