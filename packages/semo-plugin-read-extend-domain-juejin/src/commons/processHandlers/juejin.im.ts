@@ -6,6 +6,9 @@ export const preprocess = (html, argv) => {
   const $ = cheerio.load(html)
   const title = $('title').html()
   let content = $('.article-content').html()
+
+  // 去掉一大段 css
+  content = content.replace(/<style>[\w\W]*?<\/style>/g, '')
   
   // 去掉网页复制代码功能带来的干扰
   content = content.replace(/<span class="copy-code-btn">(.*)<\/span>/g, '')

@@ -5089,8 +5089,8 @@ stealthy-require@^1.1.1:
 
 stmux@^1.8.0:
   version "1.8.0"
-  resolved "https://registry.yarnpkg.com/stmux/-/stmux-1.8.0.tgz#4c547f9ec8c03d72d2e9bee755726e1a7d0c12c7"
-  integrity sha512-6TenpCHmH5Rep0ODeK4tP93yVLwUS27Ez8Q2QdzlTKVe91IpKPl1pogTsR4R1tsJEpAwe6RklnASNrsnnkQKjA==
+  resolved "https://registry.npm.taobao.org/stmux/download/stmux-1.8.0.tgz#4c547f9ec8c03d72d2e9bee755726e1a7d0c12c7"
+  integrity sha1-TFR/nsjAPXLS6b7nVXJuGn0MEsc=
   dependencies:
     "@babel/runtime" "7.7.7"
     aggregation "1.2.6"
