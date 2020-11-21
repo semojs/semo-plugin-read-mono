@@ -7,4 +7,5 @@ import * as juejinProcessHandler from '../commons/processHandlers/juejin.im'
  */
 export const hook_domain = new Utils.Hook('read', {
   'juejin.im': juejinProcessHandler,
+  'juejin.cn': juejinProcessHandler,
 })
