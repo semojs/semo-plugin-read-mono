@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-epub",
-  "version": "1.0.20",
+  "version": "1.0.21",
   "description": "A plugin of semo-plugin-read, provide formats of epub.",
   "keywords": [
     "cli",
@@ -37,7 +37,7 @@
   },
   "dependencies": {
     "@semo/core": "^1.5.13",
-    "semo-plugin-read": "^1.0.20"
+    "semo-plugin-read": "^1.0.21"
   },
   "publishConfig": {
     "access": "public"
