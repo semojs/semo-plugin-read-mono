@@ -5,6 +5,7 @@ import convertMarkdownToFile from '../commons/convertMarkdownToFile'
 import chalk from 'chalk'
 import _ from 'lodash'
 import mkdirp from 'mkdirp'
+import got from 'got'
 
 export const plugin = 'read'
 export const disabled = false // Set to true to disable this command temporarily
@@ -102,11 +103,20 @@ export const handler = async function (argv: any) {
   cache.set('argv', argv) // set argv again
 
   try {
-    if (argv.url && argv.url.match(/\.md$/) && !argv.url.match(/^http/)) {
-      // local
-      let filePath = argv.url[0] !== '/' ? path.resolve(process.cwd(), argv.url) : argv.url
-      markdown = fs.readFileSync(filePath, { encoding: 'utf8' })
-      title = path.basename(filePath, '.md')
+    if (argv.url && argv.url.match(/\.md$/)) {
+
+      if (!argv.url.match(/^http/)) {
+        
+        // local
+        let filePath = argv.url[0] !== '/' ? path.resolve(process.cwd(), argv.url) : argv.url
+        markdown = fs.readFileSync(filePath, { encoding: 'utf8' })
+        title = path.basename(filePath, '.md')
+      } else {
+        let { body } = await got(argv.url)
+        markdown = body
+        title = path.basename(argv.url, '.md')
+      }
+
     } else {
       converted = await convertUrlToMarkdown(argv)
       if (!converted) {

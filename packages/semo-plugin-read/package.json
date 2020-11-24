@@ -39,6 +39,7 @@
     "@semo/core": "^1.5.13",
     "@vipzhichengfork/node-readability": "^1.0.5",
     "clipboardy": "^2.3.0",
+    "got": "^11.8.0",
     "marked": "^1.2.5",
     "marked-terminal": "^4.1.0",
     "mkdirp": "^1.0.4",
