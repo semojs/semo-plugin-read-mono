@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-domain-jianshu",
-  "version": "1.0.19",
+  "version": "1.0.20",
   "description": "A plugin of semo-plugin-read, provide pre/post process handler for domain jianshu.com.",
   "keywords": [
     "cli",
