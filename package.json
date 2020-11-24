@@ -4,6 +4,7 @@
   "scripts": {
     "test": "exit 0",
     "lerna": "lerna",
+    "semo": "lerna exec  --scope semo-plugin-read -- semo",
     "prepublish": "lerna run prepublish",
     "lerna:publish": "lerna publish from-git --yes",
     "upgrade:preview": "lerna exec -- ncu && ncu",

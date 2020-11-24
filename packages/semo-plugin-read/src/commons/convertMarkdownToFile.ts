@@ -2,7 +2,7 @@
 import { Utils } from '@semo/core'
 
 const convertMarkdownToFile = async ({ format, title, markdown, argv, converted }) => {
-  const extendFormats = await Utils.invokeHook('read:define_format')
+  const extendFormats: any = await Utils.invokeHook('read:define_format')
   
   // support format alias
   Object.keys(extendFormats).forEach((format: any) => {

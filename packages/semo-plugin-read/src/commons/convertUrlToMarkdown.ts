@@ -29,7 +29,7 @@ const convertUrlToMarkdown = async (argv) => {
     argv.domain = url.host.replace(/^www\./, '')
   }
 
-  const extendDomains = await Utils.invokeHook('read:domain')
+  const extendDomains: any = await Utils.invokeHook('read:domain')
 
   // 初始化转换库
   const turndownService = new TurndownService({
