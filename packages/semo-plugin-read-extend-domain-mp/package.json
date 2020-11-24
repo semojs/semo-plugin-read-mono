@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-domain-mp",
-  "version": "1.0.16",
+  "version": "1.0.19",
   "description": "A plugin of semo-plugin-read, provide pre/post process handler for domain mp.weixin.qq.com.",
   "keywords": [
     "cli",
