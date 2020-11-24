@@ -992,32 +992,6 @@
     "@nodelib/fs.scandir" "2.1.3"
     fastq "^1.6.0"
 
-"@semo/core@^1.5.1":
-  version "1.5.1"
-  resolved "https://registry.yarnpkg.com/@semo/core/-/core-1.5.1.tgz#96adf413d179a1ac93c0787da38f29da7205b372"
-  integrity sha512-mgZM+0SzbFqApXq2+jF2Il44ephyU3bpgI2t3k3rbePvSacFQq82n69/fqXaqSytisrMp+GYHoEPr2QEbvsoTg==
-  dependencies:
-    chalk "^4.1.0"
-    dayjs "^1.9.4"
-    debug "^4.2.0"
-    envinfo "^7.7.3"
-    find-up "^5.0.0"
-    fs-extra "^9.0.1"
-    fuzzy "^0.1.3"
-    get-stdin "^8.0.0"
-    glob "^7.1.6"
-    inquirer "^7.3.3"
-    json-colorizer "^2.2.2"
-    json-stringify-pretty-compact "^2.0.0"
-    lodash "^4.17.20"
-    node-cache "^5.1.2"
-    object-hash "^2.0.3"
-    shelljs "^0.8.4"
-    table "^6.0.3"
-    update-notifier "^5.0.0"
-    yaml "^1.10.0"
-    yargs "^16.1.0"
-
 "@semo/core@^1.5.13", "@semo/core@^1.5.3":
   version "1.5.13"
   resolved "https://registry.yarnpkg.com/@semo/core/-/core-1.5.13.tgz#715f8e17e7c81f49e9450a81afb3f030728ac0ca"
@@ -6079,7 +6053,7 @@ marked-terminal@^4.1.0:
     node-emoji "^1.10.0"
     supports-hyperlinks "^2.1.0"
 
-marked@^1.2.2:
+marked@^1.2.5:
   version "1.2.5"
   resolved "https://registry.yarnpkg.com/marked/-/marked-1.2.5.tgz#a44b31f2a0b8b5bfd610f00d55d1952d1ac1dfdb"
   integrity sha512-2AlqgYnVPOc9WDyWu7S5DJaEZsfk6dNh/neatQ3IHUW4QLutM/VPSH9lG7bif+XjFWc9K9XR3QvR+fXuECmfdA==
@@ -8236,15 +8210,15 @@ selfsigned@^1.10.7:
   dependencies:
     node-forge "0.9.0"
 
-semo-plugin-read@^1.0.16:
-  version "1.0.16"
-  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.16.tgz#ef627d1f026e769e5fb2d730e14ed10622ac3006"
-  integrity sha512-h38a5KSgaXtpA33X9QxUVXOLOsHgNsuth7IIb0orkNQTN73Gr6ROOQaWxOWHQO/7w883r1eNIZW5cl5gUDW2zA==
+semo-plugin-read@^1.0.19:
+  version "1.0.19"
+  resolved "https://registry.yarnpkg.com/semo-plugin-read/-/semo-plugin-read-1.0.19.tgz#76b79d00970772df04d473c26d355429e1a0d62f"
+  integrity sha512-1x4MCaSvjfuvAZNe/bdAu6EE0Wubo+HKtATPV3IuMe36fKQ1dODGEcsUoddjYHDwdu010gjaxk2rqWUBNw3XbA==
   dependencies:
-    "@semo/core" "^1.5.1"
+    "@semo/core" "^1.5.13"
     "@vipzhichengfork/node-readability" "^1.0.5"
     clipboardy "^2.3.0"
-    marked "^1.2.2"
+    marked "^1.2.5"
     marked-terminal "^4.1.0"
     mkdirp "^1.0.4"
     shelljs "^0.8.4"

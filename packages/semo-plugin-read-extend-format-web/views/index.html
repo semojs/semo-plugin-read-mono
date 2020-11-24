@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html data-darkmode="light">
+<head>
+
+  <title>{{title}}</title>
+  <link rel="stylesheet" href="./heti.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+  <main class="container">
+    <article class="article heti heti--classic">
+  {{html | safe}}
+  </article>
+  </main>
+
+  <aside class="panel">
+    <ul class="panel-list panel-list--gray">
+      <li><input type="radio" class="J_fontStack" value="heti--sans" name="font" id="font-sans"><label for="font-sans">黑体</label></li>
+      <li><input checked="true" type="radio" class="J_fontStack" value="heti--serif" name="font" id="font-serif"><label for="font-serif">宋体</label></li>
+    </ul>
+    <ul class="panel-list panel-list--gray panel-list--icon">
+      <li><input checked="true" type="radio" class="J_darkMode" value="light" name="darkmode" id="darkmode-light"><label for="darkmode-light">🌞</label></li>
+      <li><input type="radio" class="J_darkMode" value="dark" name="darkmode" id="darkmode-dark"><label for="darkmode-dark">🌙</label></li>
+    </ul>
+  </aside>
+  <script src="./heti-addon.min.js"></script>
+  <script>
+    const $$root = document.getElementsByTagName('html')[0]
+    const $$main = document.getElementsByTagName('main')[0]
+    const $$article = document.getElementsByTagName('article')[0]
+
+    function addEventListeners(nodeList, event, fn) {
+      [].forEach.call(nodeList, function(elm) {
+        elm.addEventListener(event, fn, false)
+      }, false)
+    }
+
+    addEventListeners(document.getElementsByClassName('J_darkMode'), 'change', function (e) {
+      $$root.setAttribute('data-darkmode', e.target.value)
+    })
+
+
+    addEventListeners(document.getElementsByClassName('J_fontStack'), 'change', function (e) {
+      $$article.className = ['article', 'heti', e.target.value].join(' ')
+    })
+
+    const heti = new Heti()
+    heti.autoSpacing()
+  </script>
+
+</body>
+</html>
