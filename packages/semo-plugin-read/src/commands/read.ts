@@ -112,7 +112,11 @@ export const handler = async function (argv: any) {
         markdown = fs.readFileSync(filePath, { encoding: 'utf8' })
         title = path.basename(filePath, '.md')
       } else {
-        let { body } = await got(argv.url)
+        let { body } = await got(argv.url, {
+          headers: {
+            'User-Agent': 'Chrome'
+          }
+        })
         markdown = body
         title = path.basename(argv.url, '.md')
       }

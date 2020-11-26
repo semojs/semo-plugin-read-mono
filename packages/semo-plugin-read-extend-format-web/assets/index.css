@@ -146,6 +146,7 @@ sup {
  */
 img {
   border-style: none;
+  width: 100%;
 }
 
 /* Forms
@@ -856,7 +857,7 @@ a {
     box-sizing: border-box;
     width: 80%;
     min-width: 640px;
-    max-width: 768px;
+    max-width: 1024px;
     margin-block-start: 48px;
     margin-block-end: 72px;
     margin-inline-start: auto;
@@ -939,4 +940,8 @@ a {
   [data-darkmode="auto"] .article__nav {
     border-color: #333333;
   }
+}
+
+article.heti {
+  max-width: 80em;
 }

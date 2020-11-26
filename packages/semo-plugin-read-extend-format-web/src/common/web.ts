@@ -7,8 +7,6 @@ export = async ({ title, markdown, converted, argv }) => {
 
   let html = marked(markdown)
 
-  console.log({html, markdown})
-
   await startServer({
     port: argv.port,
     proxy: true,
