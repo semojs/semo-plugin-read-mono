@@ -46,8 +46,11 @@
   "dependencies": {
     "@semo/core": "^1.5.13",
     "marked": "^1.2.5",
-    "semo-plugin-read": "^1.0.22",
     "semo-plugin-serve": "^1.2.9"
+  },
+  "peerDependencies": {
+    "semo-plugin-read": "^1.0.22"
+
   },
   "publishConfig": {
     "access": "public"

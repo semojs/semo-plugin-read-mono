@@ -1,4 +1,4 @@
-export = async (ctx, argv) => {
+export const handler = async (ctx, argv) => {
   ctx.json = false
   return await ctx.render('index.html', argv.viewsData || {})
 }
