@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-web",
-  "version": "1.0.22",
+  "version": "1.0.23",
   "description": "A plugin of semo-plugin-read, provide markdown web format",
   "keywords": [
     "cli",
@@ -50,7 +50,6 @@
   },
   "peerDependencies": {
     "semo-plugin-read": "^1.0.22"
-
   },
   "publishConfig": {
     "access": "public"
