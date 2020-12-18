@@ -1,6 +1,6 @@
 {
   "name": "semo-plugin-read-extend-format-web",
-  "version": "1.0.25",
+  "version": "1.0.26",
   "description": "A plugin of semo-plugin-read, provide markdown web format",
   "keywords": [
     "cli",
