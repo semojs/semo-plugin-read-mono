@@ -15,7 +15,7 @@ Also you can just launch server without URL
 semo read --format web
 ```
 
-Then, you can pass any url in Browser
+Then, you can pass any urls in Browser
 
 ```
 http://127.0.0.1:3000/url/URL
