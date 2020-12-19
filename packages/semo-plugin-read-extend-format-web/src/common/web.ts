@@ -12,7 +12,7 @@ export = async ({ title, markdown, converted, argv }) => {
     proxy: true,
     // gzip: true,
     fileIndex: false,
-    routeDir: path.resolve(__dirname, '../routers'),
+    routeDir: path.resolve(__dirname, '../routes'),
     publicDir: path.resolve(__dirname, '../../assets'),
     viewsDir: path.resolve(__dirname, '../../views'),
     viewsData: { title, html },

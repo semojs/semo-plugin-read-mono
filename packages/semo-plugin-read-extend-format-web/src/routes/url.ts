@@ -1,6 +1,8 @@
 import { convertUrlToMarkdown } from 'semo-plugin-read'
 import marked from 'marked'
 
+export const path = '(.*)'
+
 export const handler = async (ctx, argv) => {
   const data = {
     html: '',
