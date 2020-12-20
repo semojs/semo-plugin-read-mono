@@ -16,13 +16,14 @@
     "watch:domain:jianshu": "cd packages/semo-plugin-read-extend-domain-jianshu && yarn watch",
     "watch:domain:juejin": "cd packages/semo-plugin-read-extend-domain-juejin && yarn watch",
     "watch:domain:mp": "cd packages/semo-plugin-read-extend-domain-mp && yarn watch",
+    "watch:format:web": "cd packages/semo-plugin-read-extend-format-web && yarn watch",
     "watch:domain:zhihu": "cd packages/semo-plugin-read-extend-domain-zhihu && yarn watch",
     "watch:format:editor": "cd packages/semo-plugin-read-extend-format-editor && yarn watch",
     "watch:format:wechat": "cd packages/semo-plugin-read-extend-format-wechat && yarn watch",
     "watch:format:epub": "cd packages/semo-plugin-read-extend-format-epub && yarn watch",
     "watch:format:mobi": "cd packages/semo-plugin-read-extend-format-mobi && yarn watch",
     "watch:format:puppeteer": "cd packages/semo-plugin-read-extend-format-puppeteer && yarn watch",
-    "watch": "stmux -M -e Error -- [ [ -t read 'yarn watch:read' ] : [ -t editor 'yarn watch:format:editor' .. -t wechat 'yarn watch:format:wechat' .. -t epub 'yarn watch:format:epub' .. -t mobi 'yarn watch:format:mobi' .. -t puppeteer 'yarn watch:format:puppeteer' ] ]",
+    "watch": "stmux -M -e Error -- [ [ -t read 'yarn watch:read' ] : [ -t web 'yarn watch:format:web' .. -t editor 'yarn watch:format:editor' .. -t wechat 'yarn watch:format:wechat' .. -t epub 'yarn watch:format:epub' .. -t mobi 'yarn watch:format:mobi' .. -t puppeteer 'yarn watch:format:puppeteer' ] ]",
     "watch:domain": "stmux -M -e Error -- [ -t juejin 'yarn watch:domain:juejin' .. -t jianshu 'yarn watch:domain:jianshu' .. -t mp 'yarn watch:domain:mp' .. -t zhihu 'yarn watch:domain:zhihu' ]"
   },
   "devDependencies": {
