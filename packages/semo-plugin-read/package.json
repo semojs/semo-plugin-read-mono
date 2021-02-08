@@ -40,7 +40,7 @@
     "@vipzhichengfork/node-readability": "^1.0.5",
     "clipboardy": "^2.3.0",
     "got": "^11.8.0",
-    "marked": "^1.2.5",
+    "marked": "^2.0.0",
     "marked-terminal": "^4.1.0",
     "mkdirp": "^1.0.4",
     "shelljs": "^0.8.4",
